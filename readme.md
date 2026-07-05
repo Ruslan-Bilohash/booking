@@ -1,10 +1,12 @@
 # Booking CMS
 
-Universal **PHP booking platform** — hotels, apartments and cabins. Booking.com-inspired UI, multilingual frontend, property search, demo booking flow and admin panel. Portfolio project by [Ruslan Bilohash](https://bilohash.com/).
+Universal **PHP booking script** for any reservation business — hotels, apartment rentals, doctor & dentist appointments, beauty salons, spas, fitness and more. Ships as a Booking.com-style hotel demo; customize labels, listing types and workflows for your niche. Multilingual frontend, search, demo booking flow, guest reviews and admin panel. Portfolio project by [Ruslan Bilohash](https://bilohash.com/).
+
+**Version:** 1.2.0 · **Languages:** [English](README.md) · [Norsk](README-no.md) · [Українська](README-uk.md) · [Русский](README-ru.md)
 
 ![PHP](https://img.shields.io/badge/PHP-8%2B-777BB4?logo=php&logoColor=white)
-![License](https://img.shields.io/badge/license-Demo%20%2F%20Portfolio-blue)
-![i18n](https://img.shields.io/badge/languages-NO%20%7C%20EN%20%7C%20UA-green)
+![Version](https://img.shields.io/badge/version-1.2.0-blue)
+![i18n](https://img.shields.io/badge/languages-NO%20%7C%20EN%20%7C%20UA%20%7C%20RU-green)
 
 ## Live demo
 
@@ -13,6 +15,9 @@ Universal **PHP booking platform** — hotels, apartments and cabins. Booking.co
 | **Frontend demo** | https://bilohash.com/booking/ |
 | **Admin panel** | https://bilohash.com/booking/admin/ |
 | **Product page** | https://bilohash.com/booking/site/ |
+| **Order / contact** | https://bilohash.com/booking/order.php |
+| **Solutions hub** | https://bilohash.com/booking/solutions.php |
+| **Sitemap** | https://bilohash.com/booking/sitemap.php |
 | **Launch news** | https://bilohash.com/news/booking-cms.html |
 
 **Admin login (demo):** `demo` / `bilobook2026`
@@ -22,28 +27,36 @@ Universal **PHP booking platform** — hotels, apartments and cabins. Booking.co
 ### Public frontend
 - Homepage with search hero, trending destinations and deals
 - Search results with filters (type, price, sort)
-- Property detail pages with rating, amenities and booking summary
+- Property detail: overview, amenities, guest reviews tabs
+- **Location block** — GPS coordinates, OpenStreetMap embed, “Start trip” (Google Maps directions)
 - Demo booking form (guest details → saved to JSON)
-- Responsive layout (mobile, tablet, desktop)
-- Languages: **Norwegian** (default), **English**, **Ukrainian** (`?lang=` + cookie)
+- Public guest review form with reCAPTCHA and moderation queue
+- Contact page and order page for custom development
+- SEO vertical landing pages (hotels, rentals, clinics, salons, spa, fitness, equipment)
+- Responsive layout with mobile burger menu
+- Languages: **Norwegian** (default), **English**, **Ukrainian**, **Russian** (`?lang=` + cookie)
 
 ### Admin panel
 - Dashboard with stats (properties, bookings, revenue)
-- Property list and edit (price, deal %, rating, names, active/hidden)
+- Property list and edit (price, deal %, rating, names, coordinates, active/hidden)
 - Booking management (pending / confirmed / cancelled)
+- Guest review moderation (approve, hide, delete, add)
+- **Settings:** appearance (colours, footer), reCAPTCHA v2, AI chat widget (Grok / OpenAI)
+- Multilingual admin UI (NO, EN, UA, RU)
 - Sidebar navigation with mobile drawer
 
 ### Marketing site (`/site/`)
 - Product landing for Booking CMS
-- 4 languages: NO, EN, UA, LT
-- Screenshots gallery and tech stack
+- Languages: NO, EN, UA, RU, LT
+- Screenshots gallery, version info and tech stack
 
 ## Tech stack
 
 - PHP 8+ (no framework)
-- JSON storage (`data/properties.json`, `data/bookings.json`)
+- JSON storage (`data/*.json`) — MySQL option on request
 - Modular i18n (`lang/*.php`)
-- Apache `.htaccess`, SEO (canonical, hreflang, sitemap)
+- Apache `.htaccess`, SEO (canonical, hreflang, Schema.org, sitemap)
+- OpenStreetMap embed + Google Maps directions (no API key)
 - Font Awesome 6, vanilla CSS & JS
 
 ## Requirements
@@ -93,26 +106,34 @@ Change admin credentials in `includes/admin-auth.php` before production use.
 booking/
 ├── index.php              # Homepage
 ├── search.php             # Search results
-├── property.php           # Property detail
+├── property.php           # Property detail + map
 ├── book.php               # Booking form
+├── contact.php            # Contact form
+├── order.php              # Order custom website
+├── solutions.php          # Solutions hub
+├── vertical.php           # SEO vertical pages
 ├── config.php             # Main config
 ├── init.php               # Bootstrap
-├── lang/                  # NO, EN, UK translations
-├── includes/              # Header, footer, i18n, storage
+├── lang/                  # NO, EN, UK, RU translations
+├── includes/              # Header, footer, i18n, storage, SEO
 ├── assets/css|js/         # Frontend styles & scripts
 ├── data/
 │   ├── properties.php     # Seed data (10 demo properties)
 │   ├── properties.json    # Runtime storage (auto-created)
-│   └── bookings.json      # Bookings (auto-created)
+│   ├── bookings.json      # Bookings (auto-created)
+│   ├── reviews.json       # Guest reviews (auto-created)
+│   └── settings.json      # Admin settings (auto-created)
 ├── admin/                 # Admin panel
 │   ├── login.php
 │   ├── index.php          # Dashboard
 │   ├── properties.php
 │   ├── property.php
-│   └── bookings.php
-├── site/                  # Marketing landing (4 langs)
+│   ├── bookings.php
+│   ├── reviews.php
+│   └── settings-*.php     # Appearance, reCAPTCHA, chat
+├── site/                  # Marketing landing
 ├── screen/                # UI screenshots (SVG)
-├── sitemap.xml
+├── sitemap.php / sitemap.xml
 └── robots.txt
 ```
 
@@ -126,6 +147,8 @@ booking/
 | Booking form | `screen/book.svg` |
 | Admin dashboard | `screen/admin-dashboard.svg` |
 | Admin bookings | `screen/admin-bookings.svg` |
+| Admin reviews | `screen/admin-reviews.svg` |
+| Solutions | `screen/solutions.svg` |
 
 ## Demo mode
 
@@ -137,10 +160,10 @@ This is a **demo / portfolio** project:
 
 ## Author
 
-**Ruslan Bilohash**  
-- Website: https://bilohash.com/  
-- GitHub: https://github.com/Ruslan-Bilohash/  
-- Email: rbilohash@gmail.com  
+**Ruslan Bilohash**
+- Website: https://bilohash.com/
+- GitHub: https://github.com/Ruslan-Bilohash/
+- Email: rbilohash@gmail.com
 
 ## License
 
