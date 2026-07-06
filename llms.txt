@@ -1,0 +1,53 @@
+# Booking CMS — LLM / AI agent context
+# Scope: https://bilohash.com/booking/ only
+
+> Booking CMS — universal PHP online booking script from Norway: hotels, rentals, doctor & dentist appointments, beauty salons and more. Multilingual frontend, Schema.org markup, admin panel and JSON. Booking.com-style demo — the same engine for any reservation workflow. Markets: Norway (NO), Europe (EN), Ukraine (UA), Sweden (SV).
+
+## Product
+- Name: Booking CMS
+- Version: 1.2.0 (2026-07-05) — same on /booking/site/ and /booking/admin/
+- Base URL: https://bilohash.com/booking/
+- Type: PHP 8+ online booking / reservation script (no framework)
+- Storage: JSON files under /booking/data/
+- Languages: Norwegian (default), English, Swedish, Ukrainian, Russian
+
+## Public URLs (/booking/)
+- Home / search: https://bilohash.com/booking/
+- Property detail: https://bilohash.com/booking/property.php?id={id}
+- Search results: https://bilohash.com/booking/search.php
+- Contact: https://bilohash.com/booking/contact.php
+- Product page: https://bilohash.com/booking/site/
+- Solutions hub: https://bilohash.com/booking/solutions.php
+- SEO verticals: /booking/hotell-overnatting/, /booking/leiebolig/, /booking/legetime/, /booking/tannlege/, /booking/skjonnhetssalong/, /booking/spa-massasje/, /booking/trening-kurs/, /booking/utstyrutleie/
+- Sitemap: https://bilohash.com/booking/sitemap.php
+- Launch news: https://bilohash.com/news/booking-cms.html
+
+## Admin (/booking/admin/)
+- Login: https://bilohash.com/booking/admin/login.php
+- Demo credentials: demo / bilobook2026
+- Dashboard, properties, bookings, guest reviews moderation
+- Settings: Appearance (colours + footer), reCAPTCHA v2, AI chat (Grok xAI / OpenAI GPT)
+- Settings stored in /booking/data/settings.json
+
+## Features
+- Property search with filters (destination, dates, type, price)
+- 10 demo properties (Norway, Ukraine, Lithuania, Europe)
+- Property page tabs: overview, facilities (amenities), guest reviews + public review form
+- Guest review moderation in admin (approve, hide, delete, add)
+- Theme settings: primary colour, buttons, hover, footer background, optional page background
+- reCAPTCHA on contact, booking and review forms (step-by-step admin instructions, 4 languages)
+- Optional floating AI chat widget with system instructions
+- Schema.org, Open Graph, hreflang (no, en, uk, ru), responsive frontend
+- Multilingual admin panel (NO, EN, UA, RU)
+
+## Commercial intent
+- Order custom booking website development (Norway / remote)
+- PHP booking script with admin panel and multilingual frontend
+- Hotels, clinics, salons, rentals — white-label ready
+
+## Tech notes
+- PHP 8+, no framework
+- Demo storage: JSON files (properties.json, bookings.json, reviews.json, settings.json)
+- Production option: MySQL / MariaDB backend instead of JSON (available on request / custom deploy)
+- Extensible: payment gateways (Stripe, Vipps), white-label deploy
+- Contact for licensing / customisation: https://bilohash.com/booking/contact.php

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+Sitemap: https://bilohash.com/booking/sitemap.php
+
+# AI / LLM context: https://bilohash.com/booking/llms.txt

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Static fallback — use https://bilohash.com/booking/sitemap.php for full sitemap -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url><loc>https://bilohash.com/booking/</loc><lastmod>2026-07-05</lastmod><priority>1.0</priority></url>
+    <url><loc>https://bilohash.com/booking/site/</loc><lastmod>2026-07-05</lastmod><priority>0.95</priority></url>
+    <url><loc>https://bilohash.com/booking/order.php</loc><lastmod>2026-07-05</lastmod><priority>0.93</priority></url>
+    <url><loc>https://bilohash.com/booking/site/order.php</loc><lastmod>2026-07-05</lastmod><priority>0.92</priority></url>
+    <url><loc>https://bilohash.com/booking/solutions.php</loc><lastmod>2026-07-05</lastmod><priority>0.92</priority></url>
+    <url><loc>https://bilohash.com/booking/contact.php</loc><lastmod>2026-07-05</lastmod><priority>0.88</priority></url>
+    <url><loc>https://bilohash.com/booking/site/contact.php</loc><lastmod>2026-07-05</lastmod><priority>0.87</priority></url>
+    <url><loc>https://bilohash.com/booking/sitemap.php</loc><lastmod>2026-07-05</lastmod><priority>0.5</priority></url>
+    <url><loc>https://bilohash.com/booking/llms.txt</loc><lastmod>2026-07-05</lastmod><priority>0.5</priority></url>
+    <url><loc>https://bilohash.com/news/booking-cms.html</loc><lastmod>2026-07-05</lastmod><priority>0.75</priority></url>
+</urlset>

@@ -1,0 +1,21 @@
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# Deploy artifacts
+*.zip
+booking-deploy.zip
+booking-dedupe-deploy.zip
+
+# Local overrides (never commit secrets)
+.env
+.env.*
+**/mail-config.php
+**/settings-local.php
+
+# User-generated runtime data (optional — demo JSON is tracked)
+# data/bookings.json

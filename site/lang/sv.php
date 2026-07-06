@@ -1,0 +1,71 @@
+<?php
+$en = require __DIR__ . '/en.php';
+return array_replace_recursive($en, [
+    'meta' => [
+        'title'       => 'Booking CMS — PHP bokningsskript {country} | Hotell, uthyrning, tider',
+        'description' => 'Booking CMS — universellt PHP onlinebokningsskript från {origin} för {country}: hotell, uthyrning, läkar- och tandläkartider, skönhetssalong med mera. Demopriser i {currency}. Flerspråkigt gränssnitt, Schema.org, adminpanel och JSON.',
+        'keywords'    => 'bokningsskript {country}, PHP onlinebokning, hotellbokning system, {currency} demo, Schema.org bokning, Booking CMS, bilohash',
+    ],
+    'nav' => [
+        'features'   => 'Funktioner',
+        'screens'    => 'Skärmdumpar',
+        'tech'       => 'Teknik',
+        'seo'        => 'SEO',
+        'demo'       => 'Live demo',
+        'version'    => 'Version',
+        'admin'      => 'Admin',
+        'contact'    => 'Kontakt',
+        'order'      => 'Beställ utveckling',
+    ],
+    'hero' => [
+        'version_badge' => 'Aktuell version',
+        'subtitle' => 'Universellt PHP onlinebokningsskript från {origin} för {country} — hotell, uthyrning, läkar- och tandläkartider, skönhetssalong. Schema.org, adminpanel, JSON och demopriser i {currency}.',
+        'cta_demo' => 'Se live demo',
+        'cta_admin'=> 'Admin demo',
+        'cta_contact' => 'Kontakta utvecklare',
+    ],
+    'intro' => [
+        'title' => 'Ett skript — många bokningsscenarier',
+        'text'  => 'Booking CMS — universellt PHP onlinebokningsskript från {origin} för {country}: hotell, uthyrning, läkar- och tandläkartider, skönhetssalong med mera. Flerspråkigt gränssnitt, Schema.org-mikrodata, adminpanel och JSON. Booking.com-demo — samma motor {for_country}. Priser i {currency}.',
+        'use_label' => 'Perfekt utgångspunkt för:',
+        'use_cases' => ['Hotell & boende', 'Hyresbostad', 'Läkarbesök', 'Tandläkare', 'Skönhetssalong', 'Spa & massage', 'Träning & kurser', 'Utrustningsuthyrning'],
+    ],
+    'demo' => [
+        'frontend_desc' => 'Sök bland 10 demoobjekt {in_country}. Priser i {currency}. Byt språk: NO / EN / SV / UA / RU / LT.',
+    ],
+    'order' => [
+        'page_title' => 'Beställ bokningswebbplats | Booking CMS',
+        'meta_description' => 'Beställ skräddarsydd bokningswebbplats {in_country}. PHP Booking CMS — hotell, uthyrning, klinik, salong. {currency}, Schema.org, adminpanel.',
+        'h1'         => 'Beställ utveckling av bokningswebbplats',
+        'subtitle'   => 'Skräddarsytt PHP-reservationssystem för hotell, uthyrning, kliniker och salonger — från {origin}, {for_country}. Betalningar i {currency}.',
+        'intro'      => 'Booking CMS är en beprövad utgångspunkt. Vi anpassar demo, admin, SEO och bokningsflöde till ditt varumärke, nisch och hosting.',
+        'benefits_title' => 'Det du får',
+        'benefits'   => [
+            ['title' => 'Anpassat bokningsflöde', 'text' => 'Fält, kategorier, statusar och e-post anpassade till din verksamhet — inte en generisk mall.'],
+            ['title' => 'Flerspråkig SEO', 'text' => 'NO, EN, UA, RU, LT — hreflang, Schema.org, sitemap och PageSpeed 99+ på demon.'],
+            ['title' => 'Admin och moderering', 'text' => 'Objekt, bokningar, gästrecensioner, reCAPTCHA, AI-chatt och CMS-inställningar med instruktioner på 4 språk.'],
+            ['title' => 'Driftsättningsstöd', 'text' => 'JSON-demo eller MySQL/MariaDB i produktion — delad hosting eller VPS, white-label valfritt.'],
+        ],
+        'steps_title' => 'Så beställer du',
+        'steps'      => [
+            'Utforska live-demon och skärmdumparna på produktsidan.',
+            'Skicka en kort brief via kontaktformuläret: nisch, språk, integrationer.',
+            'Vi svarar med offert, tidsplan och valfritt MySQL-/betalningsomfång.',
+            'Efter avtal — anpassning, staging och lansering på din domän.',
+        ],
+        'cta_contact'  => 'Diskutera ditt projekt',
+        'cta_demo'     => 'Se live demo',
+        'cta_product'  => 'Produktfunktioner',
+        'cta_solutions'=> 'Branschlösningar',
+        'cta_portfolio'=> 'bilohash.com portfölj',
+        'crosslinks_title' => 'Utforska innan du beställer',
+    ],
+    'footer' => [
+        'demo_link' => 'Live bokningsdemo',
+        'news' => 'Lanseringsnyheter',
+        'order' => 'Beställ utveckling',
+        'order_page' => 'Beställ bokningswebbplats',
+        'sitemap' => 'Webbplatskarta',
+        'llms' => 'llms.txt för AI',
+    ],
+]);

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720">
+  <rect width="1200" height="720" fill="#f5f5f5"/>
+  <rect width="1200" height="52" fill="#003580"/>
+  <rect x="24" y="14" width="28" height="28" rx="4" fill="#febb02"/>
+  <text x="60" y="34" fill="#fff" font-family="Segoe UI,sans-serif" font-size="18" font-weight="700">Booking CMS</text>
+  <text x="48" y="100" fill="#333" font-family="Segoe UI,sans-serif" font-size="24" font-weight="700">Complete your booking</text>
+  <text x="48" y="130" fill="#6b6b6b" font-family="Segoe UI,sans-serif" font-size="14">Fjord View Hotel · Bergen · 03–06 Jul 2026</text>
+  <rect x="48" y="160" width="680" height="480" rx="8" fill="#fff" stroke="#e7e7e7"/>
+  <text x="72" y="200" fill="#333" font-family="Segoe UI,sans-serif" font-size="16" font-weight="700">Your details</text>
+  <text x="72" y="240" fill="#6b6b6b" font-family="Segoe UI,sans-serif" font-size="12">First name</text>
+  <rect x="72" y="248" width="280" height="40" rx="4" fill="#fff" stroke="#ccc"/>
+  <text x="84" y="273" fill="#333" font-family="Segoe UI,sans-serif" font-size="14">Anna</text>
+  <text x="380" y="240" fill="#6b6b6b" font-family="Segoe UI,sans-serif" font-size="12">Last name</text>
+  <rect x="380" y="248" width="280" height="40" rx="4" fill="#fff" stroke="#ccc"/>
+  <text x="392" y="273" fill="#333" font-family="Segoe UI,sans-serif" font-size="14">Kowalska</text>
+  <text x="72" y="320" fill="#6b6b6b" font-family="Segoe UI,sans-serif" font-size="12">Email</text>
+  <rect x="72" y="328" width="588" height="40" rx="4" fill="#fff" stroke="#ccc"/>
+  <text x="84" y="353" fill="#333" font-family="Segoe UI,sans-serif" font-size="14">anna@example.com</text>
+  <text x="72" y="400" fill="#6b6b6b" font-family="Segoe UI,sans-serif" font-size="12">Phone</text>
+  <rect x="72" y="408" width="280" height="40" rx="4" fill="#fff" stroke="#ccc"/>
+  <text x="84" y="433" fill="#333" font-family="Segoe UI,sans-serif" font-size="14">+47 123 45 678</text>
+  <text x="72" y="480" fill="#6b6b6b" font-family="Segoe UI,sans-serif" font-size="12">Special requests (optional)</text>
+  <rect x="72" y="488" width="588" height="80" rx="4" fill="#fff" stroke="#ccc"/>
+  <text x="84" y="518" fill="#999" font-family="Segoe UI,sans-serif" font-size="13">Late check-in after 22:00</text>
+  <rect x="72" y="590" width="200" height="44" rx="4" fill="#0071c2"/>
+  <text x="130" y="618" fill="#fff" font-family="Segoe UI,sans-serif" font-size="15" font-weight="700">Book now</text>
+  <rect x="760" y="160" width="392" height="300" rx="8" fill="#fff" stroke="#e7e7e7"/>
+  <rect x="784" y="184" width="120" height="80" rx="4" fill="#8ab4d4"/>
+  <text x="920" y="210" fill="#333" font-family="Segoe UI,sans-serif" font-size="15" font-weight="700">Fjord View Hotel</text>
+  <text x="920" y="235" fill="#6b6b6b" font-family="Segoe UI,sans-serif" font-size="12">Bergen, Norway</text>
+  <line x1="784" y1="280" x2="1128" y2="280" stroke="#e7e7e7"/>
+  <text x="784" y="310" fill="#333" font-family="Segoe UI,sans-serif" font-size="14">3 nights · 2 adults</text>
+  <text x="784" y="340" fill="#333" font-family="Segoe UI,sans-serif" font-size="14">Room price</text>
+  <text x="1100" y="340" fill="#333" font-family="Segoe UI,sans-serif" font-size="14" text-anchor="end">1 890 kr</text>
+  <text x="784" y="370" fill="#cc0000" font-family="Segoe UI,sans-serif" font-size="13">Weekend deal -10%</text>
+  <text x="1100" y="370" fill="#cc0000" font-family="Segoe UI,sans-serif" font-size="13" text-anchor="end">-189 kr</text>
+  <text x="784" y="420" fill="#333" font-family="Segoe UI,sans-serif" font-size="18" font-weight="700">Total</text>
+  <text x="1100" y="420" fill="#333" font-family="Segoe UI,sans-serif" font-size="18" font-weight="700" text-anchor="end">1 701 kr</text>
+  <rect x="760" y="480" width="392" height="80" rx="8" fill="#d4edda" stroke="#28a745"/>
+  <text x="784" y="515" fill="#155724" font-family="Segoe UI,sans-serif" font-size="14" font-weight="600">✓ Demo booking saved to JSON</text>
+  <text x="784" y="540" fill="#155724" font-family="Segoe UI,sans-serif" font-size="12">Visible in Admin → Bookings</text>
+</svg>

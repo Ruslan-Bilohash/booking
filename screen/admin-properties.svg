@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720">
+  <rect width="1200" height="720" fill="#f0f2f5"/>
+  <rect width="240" height="720" fill="#001a40"/>
+  <rect x="20" y="24" width="32" height="32" rx="6" fill="#febb02"/>
+  <text x="60" y="46" fill="#fff" font-family="Segoe UI,sans-serif" font-size="16" font-weight="700">Booking CMS</text>
+  <rect x="12" y="128" width="216" height="40" rx="6" fill="#0071c2"/>
+  <text x="48" y="154" fill="#fff" font-family="Segoe UI,sans-serif" font-size="14" font-weight="600">Properties</text>
+  <text x="280" y="48" fill="#333" font-family="Segoe UI,sans-serif" font-size="24" font-weight="700">Properties</text>
+  <rect x="280" y="72" width="880" height="580" rx="8" fill="#fff" stroke="#e7e7e7"/>
+  <rect x="308" y="100" width="824" height="36" fill="#f8fafc"/>
+  <text x="320" y="123" fill="#64748b" font-family="Segoe UI,sans-serif" font-size="11" font-weight="600">NAME</text>
+  <text x="500" y="123" fill="#64748b" font-family="Segoe UI,sans-serif" font-size="11" font-weight="600">TYPE</text>
+  <text x="620" y="123" fill="#64748b" font-family="Segoe UI,sans-serif" font-size="11" font-weight="600">PRICE</text>
+  <text x="740" y="123" fill="#64748b" font-family="Segoe UI,sans-serif" font-size="11" font-weight="600">RATING</text>
+  <text x="900" y="123" fill="#64748b" font-family="Segoe UI,sans-serif" font-size="11" font-weight="600">STATUS</text>
+  <rect x="308" y="148" width="48" height="36" rx="4" fill="#8ab4d4"/>
+  <text x="368" y="172" fill="#333" font-family="Segoe UI,sans-serif" font-size="13">Drammen Riverside Business Hotel</text>
+  <text x="500" y="172" fill="#333" font-family="Segoe UI,sans-serif" font-size="13">Hotel</text>
+  <text x="620" y="172" fill="#333" font-family="Segoe UI,sans-serif" font-size="13">990 kr</text>
+  <text x="740" y="172" fill="#333" font-family="Segoe UI,sans-serif" font-size="13">8.4</text>
+  <rect x="900" y="158" width="64" height="22" rx="11" fill="#dcfce7"/>
+  <text x="912" y="173" fill="#166534" font-family="Segoe UI,sans-serif" font-size="11">Active</text>
+  <rect x="1000" y="158" width="56" height="22" rx="4" fill="#eff6ff"/>
+  <text x="1010" y="173" fill="#0071c2" font-family="Segoe UI,sans-serif" font-size="11">Edit</text>
+  <rect x="308" y="200" width="48" height="36" rx="4" fill="#7aa3c4"/>
+  <text x="368" y="224" fill="#333" font-family="Segoe UI,sans-serif" font-size="13">Oslo Fjord Boutique Hotel</text>
+  <text x="500" y="224" fill="#333" font-family="Segoe UI,sans-serif" font-size="13">Hotel</text>
+  <text x="620" y="224" fill="#333" font-family="Segoe UI,sans-serif" font-size="13">1890 kr</text>
+  <text x="740" y="224" fill="#333" font-family="Segoe UI,sans-serif" font-size="13">8.9</text>
+  <rect x="308" y="252" width="48" height="36" rx="4" fill="#6a93b4"/>
+  <text x="368" y="276" fill="#333" font-family="Segoe UI,sans-serif" font-size="13">Bergen Harbor Apartment</text>
+  <text x="500" y="276" fill="#333" font-family="Segoe UI,sans-serif" font-size="13">Apartment</text>
+  <rect x="280" y="380" width="420" height="240" rx="8" fill="#fff" stroke="#0071c2" stroke-width="2"/>
+  <text x="300" y="412" fill="#333" font-family="Segoe UI,sans-serif" font-size="16" font-weight="700">Edit property — Facilities</text>
+  <rect x="300" y="430" width="16" height="16" rx="2" fill="#0071c2"/>
+  <text x="324" y="444" fill="#333" font-family="Segoe UI,sans-serif" font-size="13">WiFi</text>
+  <rect x="300" y="458" width="16" height="16" rx="2" fill="#0071c2"/>
+  <text x="324" y="472" fill="#333" font-family="Segoe UI,sans-serif" font-size="13">Gym</text>
+  <rect x="300" y="486" width="16" height="16" rx="2" fill="#0071c2"/>
+  <text x="324" y="500" fill="#333" font-family="Segoe UI,sans-serif" font-size="13">Parking · Restaurant · Breakfast</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720">
+  <rect width="1200" height="720" fill="#f5f5f5"/>
+  <rect width="1200" height="36" fill="#febb02"/>
+  <text x="24" y="24" fill="#00224f" font-family="Segoe UI,sans-serif" font-size="12" font-weight="600">Demo site · Booking CMS →</text>
+  <rect y="36" width="1200" height="52" fill="#003580"/>
+  <rect x="24" y="50" width="28" height="28" rx="4" fill="#febb02"/>
+  <text x="60" y="70" fill="#fff" font-family="Segoe UI,sans-serif" font-size="18" font-weight="700">Booking CMS</text>
+  <rect x="48" y="108" width="720" height="280" rx="8" fill="#8ab4d4"/>
+  <text x="48" y="418" fill="#333" font-family="Segoe UI,sans-serif" font-size="26" font-weight="700">Drammen Riverside Business Hotel</text>
+  <text x="48" y="448" fill="#6b6b6b" font-family="Segoe UI,sans-serif" font-size="14">Drammen, Norway ★★★</text>
+  <rect x="48" y="462" width="64" height="36" rx="4 4 4 0" fill="#003580"/>
+  <text x="58" y="486" fill="#fff" font-family="Segoe UI,sans-serif" font-size="15" font-weight="700">8.4</text>
+  <text x="124" y="486" fill="#333" font-family="Segoe UI,sans-serif" font-size="14" font-weight="600">Very good · 534 reviews</text>
+  <line x1="48" y1="510" x2="768" y2="510" stroke="#e7e7e7" stroke-width="2"/>
+  <text x="48" y="538" fill="#6b6b6b" font-family="Segoe UI,sans-serif" font-size="14">Overview</text>
+  <text x="140" y="538" fill="#6b6b6b" font-family="Segoe UI,sans-serif" font-size="14">Facilities</text>
+  <text x="240" y="538" fill="#003580" font-family="Segoe UI,sans-serif" font-size="14" font-weight="700">Guest reviews</text>
+  <rect x="240" y="542" width="110" height="3" fill="#003580"/>
+  <text x="48" y="572" fill="#6b6b6b" font-family="Segoe UI,sans-serif" font-size="12">Showing 6 sample guest reviews (demo total: 534).</text>
+  <rect x="48" y="588" width="720" height="88" rx="6" fill="#fff" stroke="#e7e7e7"/>
+  <rect x="64" y="604" width="40" height="36" rx="4 4 4 0" fill="#003580"/>
+  <text x="72" y="628" fill="#fff" font-family="Segoe UI,sans-serif" font-size="13" font-weight="700">8.5</text>
+  <text x="116" y="620" fill="#333" font-family="Segoe UI,sans-serif" font-size="14" font-weight="600">Erik Lund · Sweden</text>
+  <text x="116" y="640" fill="#333" font-family="Segoe UI,sans-serif" font-size="13" font-weight="600">Solid business hotel</text>
+  <text x="116" y="662" fill="#6b6b6b" font-family="Segoe UI,sans-serif" font-size="12">Gym open early, parking included, quick train to Oslo...</text>
+  <rect x="800" y="108" width="352" height="400" rx="8" fill="#fff" stroke="#e7e7e7" stroke-width="2"/>
+  <text x="824" y="140" fill="#333" font-family="Segoe UI,sans-serif" font-size="16" font-weight="700">Your stay</text>
+  <rect x="824" y="360" width="304" height="44" rx="4" fill="#febb02"/>
+  <text x="900" y="388" fill="#00224f" font-family="Segoe UI,sans-serif" font-size="15" font-weight="700">Reserve</text>
+</svg>

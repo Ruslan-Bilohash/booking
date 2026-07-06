@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720">
+  <defs>
+    <linearGradient id="hero" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#003580"/><stop offset="100%" stop-color="#00224f"/></linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="#f5f5f5"/>
+  <rect width="1200" height="52" fill="#003580"/>
+  <rect x="24" y="14" width="28" height="28" rx="4" fill="#febb02"/>
+  <text x="60" y="34" fill="#fff" font-family="Segoe UI,sans-serif" font-size="18" font-weight="700">Booking CMS</text>
+  <text x="200" y="34" fill="#fff" font-family="Segoe UI,sans-serif" font-size="13" opacity=".9">Stays</text>
+  <text x="270" y="34" fill="#fff" font-family="Segoe UI,sans-serif" font-size="13" opacity=".7">Flights</text>
+  <rect x="980" y="12" width="90" height="28" rx="4" fill="none" stroke="#fff" stroke-width="1.5"/>
+  <text x="1000" y="31" fill="#fff" font-family="Segoe UI,sans-serif" font-size="12">Sign in</text>
+  <rect x="0" y="52" width="1200" height="220" fill="url(#hero)"/>
+  <text x="600" y="110" fill="#febb02" font-family="Segoe UI,sans-serif" font-size="12" text-anchor="middle">Demo platform by bilohash.com</text>
+  <text x="600" y="155" fill="#fff" font-family="Segoe UI,sans-serif" font-size="36" font-weight="700" text-anchor="middle">Find your next stay</text>
+  <text x="600" y="185" fill="#fff" font-family="Segoe UI,sans-serif" font-size="15" text-anchor="middle" opacity=".85">Search deals on hotels, homes and unique places</text>
+  <rect x="120" y="210" width="960" height="72" rx="8" fill="#febb02"/>
+  <rect x="128" y="218" width="280" height="56" rx="4" fill="#fff"/>
+  <text x="144" y="240" fill="#6b6b6b" font-family="Segoe UI,sans-serif" font-size="11">Where are you going?</text>
+  <text x="144" y="262" fill="#333" font-family="Segoe UI,sans-serif" font-size="14">Oslo, Norway</text>
+  <rect x="420" y="218" width="140" height="56" rx="4" fill="#fff"/>
+  <text x="436" y="240" fill="#6b6b6b" font-family="Segoe UI,sans-serif" font-size="11">Check-in</text>
+  <text x="436" y="262" fill="#333" font-family="Segoe UI,sans-serif" font-size="14">03 Jul 2026</text>
+  <rect x="572" y="218" width="140" height="56" rx="4" fill="#fff"/>
+  <text x="588" y="240" fill="#6b6b6b" font-family="Segoe UI,sans-serif" font-size="11">Check-out</text>
+  <text x="588" y="262" fill="#333" font-family="Segoe UI,sans-serif" font-size="14">06 Jul 2026</text>
+  <rect x="724" y="218" width="180" height="56" rx="4" fill="#fff"/>
+  <text x="740" y="262" fill="#333" font-family="Segoe UI,sans-serif" font-size="14">2 adults · 1 room</text>
+  <rect x="920" y="218" width="152" height="56" rx="4" fill="#0071c2"/>
+  <text x="960" y="252" fill="#fff" font-family="Segoe UI,sans-serif" font-size="16" font-weight="700">Search</text>
+  <text x="48" y="310" fill="#333" font-family="Segoe UI,sans-serif" font-size="20" font-weight="700">Trending destinations</text>
+  <rect x="48" y="330" width="260" height="160" rx="6" fill="#ddd"/>
+  <rect x="48" y="430" width="260" height="60" fill="#003580" opacity=".75"/>
+  <text x="68" y="465" fill="#fff" font-family="Segoe UI,sans-serif" font-size="16" font-weight="700">Bergen</text>
+  <rect x="324" y="330" width="260" height="160" rx="6" fill="#c8d8e8"/>
+  <rect x="324" y="430" width="260" height="60" fill="#003580" opacity=".75"/>
+  <text x="344" y="465" fill="#fff" font-family="Segoe UI,sans-serif" font-size="16" font-weight="700">Tromsø</text>
+  <rect x="600" y="330" width="260" height="160" rx="6" fill="#b8c4d0"/>
+  <rect x="600" y="430" width="260" height="60" fill="#003580" opacity=".75"/>
+  <text x="620" y="465" fill="#fff" font-family="Segoe UI,sans-serif" font-size="16" font-weight="700">Stavanger</text>
+  <rect x="876" y="330" width="260" height="160" rx="6" fill="#a8b8c8"/>
+  <rect x="876" y="430" width="260" height="60" fill="#003580" opacity=".75"/>
+  <text x="896" y="465" fill="#fff" font-family="Segoe UI,sans-serif" font-size="16" font-weight="700">Trondheim</text>
+  <text x="48" y="530" fill="#333" font-family="Segoe UI,sans-serif" font-size="20" font-weight="700">Deals for the weekend</text>
+  <rect x="48" y="550" width="360" height="140" rx="6" fill="#fff" stroke="#e7e7e7"/>
+  <rect x="48" y="550" width="140" height="140" rx="6 0 0 6" fill="#8ab4d4"/>
+  <text x="204" y="580" fill="#333" font-family="Segoe UI,sans-serif" font-size="15" font-weight="700">Fjord View Hotel</text>
+  <text x="204" y="605" fill="#6b6b6b" font-family="Segoe UI,sans-serif" font-size="12">Bergen, Norway</text>
+  <rect x="204" y="620" width="60" height="22" rx="3" fill="#003580"/>
+  <text x="214" y="635" fill="#fff" font-family="Segoe UI,sans-serif" font-size="11" font-weight="700">8.9</text>
+  <text x="320" y="670" fill="#333" font-family="Segoe UI,sans-serif" font-size="18" font-weight="700">1 890 kr</text>
+  <rect x="428" y="550" width="360" height="140" rx="6" fill="#fff" stroke="#e7e7e7"/>
+  <rect x="428" y="550" width="140" height="140" rx="6 0 0 6" fill="#7aa3c4"/>
+  <text x="584" y="580" fill="#333" font-family="Segoe UI,sans-serif" font-size="15" font-weight="700">Nordic Lights Cabin</text>
+  <text x="584" y="605" fill="#6b6b6b" font-family="Segoe UI,sans-serif" font-size="12">Tromsø, Norway</text>
+  <rect x="808" y="550" width="360" height="140" rx="6" fill="#fff" stroke="#e7e7e7"/>
+  <rect x="808" y="550" width="140" height="140" rx="6 0 0 6" fill="#6a93b4"/>
+  <text x="964" y="580" fill="#333" font-family="Segoe UI,sans-serif" font-size="15" font-weight="700">Oslo Central Suites</text>
+</svg>

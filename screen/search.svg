@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720">
+  <rect width="1200" height="720" fill="#f5f5f5"/>
+  <rect width="1200" height="52" fill="#003580"/>
+  <rect x="24" y="14" width="28" height="28" rx="4" fill="#febb02"/>
+  <text x="60" y="34" fill="#fff" font-family="Segoe UI,sans-serif" font-size="18" font-weight="700">Booking CMS</text>
+  <rect x="48" y="72" width="1104" height="56" rx="6" fill="#fff" stroke="#febb02" stroke-width="3"/>
+  <text x="72" y="106" fill="#333" font-family="Segoe UI,sans-serif" font-size="14">Oslo · 03 Jul – 06 Jul · 2 adults</text>
+  <rect x="1000" y="84" width="120" height="32" rx="4" fill="#0071c2"/>
+  <text x="1030" y="105" fill="#fff" font-family="Segoe UI,sans-serif" font-size="13" font-weight="700">Search</text>
+  <text x="48" y="160" fill="#333" font-family="Segoe UI,sans-serif" font-size="14">Oslo: <tspan font-weight="700">8 properties found</tspan></text>
+  <rect x="48" y="180" width="260" height="500" rx="6" fill="#fff" stroke="#e7e7e7"/>
+  <text x="68" y="210" fill="#333" font-family="Segoe UI,sans-serif" font-size="15" font-weight="700">Filter by:</text>
+  <text x="68" y="245" fill="#333" font-family="Segoe UI,sans-serif" font-size="13" font-weight="600">Property type</text>
+  <rect x="68" y="258" width="14" height="14" rx="2" fill="#0071c2"/>
+  <text x="90" y="270" fill="#333" font-family="Segoe UI,sans-serif" font-size="13">Hotel</text>
+  <rect x="68" y="288" width="14" height="14" rx="2" fill="none" stroke="#ccc"/>
+  <text x="90" y="300" fill="#333" font-family="Segoe UI,sans-serif" font-size="13">Apartment</text>
+  <text x="68" y="340" fill="#333" font-family="Segoe UI,sans-serif" font-size="13" font-weight="600">Price per night</text>
+  <rect x="68" y="355" width="200" height="6" rx="3" fill="#e7e7e7"/>
+  <rect x="68" y="355" width="120" height="6" rx="3" fill="#0071c2"/>
+  <text x="68" y="390" fill="#333" font-family="Segoe UI,sans-serif" font-size="13" font-weight="600">Star rating</text>
+  <text x="68" y="415" fill="#febb02" font-family="Segoe UI,sans-serif" font-size="16">★★★★☆</text>
+  <rect x="332" y="180" width="820" height="150" rx="6" fill="#fff" stroke="#e7e7e7"/>
+  <rect x="332" y="180" width="200" height="150" rx="6 0 0 6" fill="#8ab4d4"/>
+  <text x="552" y="215" fill="#333" font-family="Segoe UI,sans-serif" font-size="17" font-weight="700">Oslo Central Suites</text>
+  <text x="552" y="240" fill="#6b6b6b" font-family="Segoe UI,sans-serif" font-size="13">Oslo, Norway · Hotel</text>
+  <rect x="552" y="252" width="52" height="24" rx="3" fill="#003580"/>
+  <text x="562" y="269" fill="#fff" font-family="Segoe UI,sans-serif" font-size="12" font-weight="700">9.1 Superb</text>
+  <text x="552" y="310" fill="#008009" font-family="Segoe UI,sans-serif" font-size="12">Free cancellation</text>
+  <text x="1000" y="300" fill="#333" font-family="Segoe UI,sans-serif" font-size="22" font-weight="700" text-anchor="end">2 450 kr</text>
+  <text x="1000" y="318" fill="#6b6b6b" font-family="Segoe UI,sans-serif" font-size="11" text-anchor="end">3 nights</text>
+  <rect x="332" y="346" width="820" height="150" rx="6" fill="#fff" stroke="#e7e7e7"/>
+  <rect x="332" y="346" width="200" height="150" rx="6 0 0 6" fill="#7aa3c4"/>
+  <text x="552" y="381" fill="#333" font-family="Segoe UI,sans-serif" font-size="17" font-weight="700">Aker Brygge Apartment</text>
+  <text x="552" y="406" fill="#6b6b6b" font-family="Segoe UI,sans-serif" font-size="13">Oslo, Norway · Apartment</text>
+  <rect x="552" y="418" width="48" height="24" rx="3" fill="#003580"/>
+  <text x="562" y="435" fill="#fff" font-family="Segoe UI,sans-serif" font-size="12" font-weight="700">8.4</text>
+  <rect x="552" y="455" width="80" height="20" rx="3" fill="#cc0000"/>
+  <text x="562" y="469" fill="#fff" font-family="Segoe UI,sans-serif" font-size="11">-15% deal</text>
+  <text x="1000" y="466" fill="#333" font-family="Segoe UI,sans-serif" font-size="22" font-weight="700" text-anchor="end">1 890 kr</text>
+  <rect x="332" y="512" width="820" height="150" rx="6" fill="#fff" stroke="#e7e7e7"/>
+  <rect x="332" y="512" width="200" height="150" rx="6 0 0 6" fill="#6a93b4"/>
+  <text x="552" y="547" fill="#333" font-family="Segoe UI,sans-serif" font-size="17" font-weight="700">Holmenkollen Lodge</text>
+  <text x="552" y="572" fill="#6b6b6b" font-family="Segoe UI,sans-serif" font-size="13">Oslo, Norway · Cabin</text>
+  <rect x="552" y="584" width="48" height="24" rx="3" fill="#003580"/>
+  <text x="562" y="601" fill="#fff" font-family="Segoe UI,sans-serif" font-size="12" font-weight="700">8.7</text>
+  <text x="1000" y="632" fill="#333" font-family="Segoe UI,sans-serif" font-size="22" font-weight="700" text-anchor="end">3 200 kr</text>
+</svg>

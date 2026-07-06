@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720">
+  <rect width="1200" height="720" fill="#f0f2f5"/>
+  <rect width="240" height="720" fill="#001a40"/>
+  <rect x="20" y="24" width="32" height="32" rx="6" fill="#febb02"/>
+  <text x="60" y="46" fill="#fff" font-family="Segoe UI,sans-serif" font-size="16" font-weight="700">Booking CMS</text>
+  <rect x="12" y="248" width="216" height="40" rx="6" fill="#0071c2"/>
+  <text x="48" y="274" fill="#fff" font-family="Segoe UI,sans-serif" font-size="14" font-weight="600">Settings</text>
+  <text x="20" y="660" fill="#febb02" font-family="Segoe UI,sans-serif" font-size="13" font-weight="700">v1.2.0</text>
+  <text x="280" y="48" fill="#333" font-family="Segoe UI,sans-serif" font-size="24" font-weight="700">Settings</text>
+  <text x="900" y="48" fill="#64748b" font-family="Segoe UI,sans-serif" font-size="13">Welcome back, demo · v1.2.0</text>
+  <rect x="280" y="72" width="200" height="40" rx="20" fill="#0071c2"/>
+  <text x="330" y="98" fill="#fff" font-family="Segoe UI,sans-serif" font-size="13" font-weight="600">Appearance</text>
+  <rect x="488" y="72" width="180" height="40" rx="20" fill="#fff" stroke="#e7e7e7"/>
+  <text x="528" y="98" fill="#64748b" font-family="Segoe UI,sans-serif" font-size="13" font-weight="600">reCAPTCHA</text>
+  <rect x="676" y="72" width="160" height="40" rx="20" fill="#fff" stroke="#e7e7e7"/>
+  <text x="716" y="98" fill="#64748b" font-family="Segoe UI,sans-serif" font-size="13" font-weight="600">AI Chat</text>
+  <rect x="280" y="130" width="880" height="530" rx="8" fill="#fff" stroke="#e7e7e7"/>
+  <text x="308" y="168" fill="#333" font-family="Segoe UI,sans-serif" font-size="18" font-weight="700">Site colours</text>
+  <text x="308" y="196" fill="#64748b" font-family="Segoe UI,sans-serif" font-size="13">Accent colours for buttons, links and footer on the public site.</text>
+  <rect x="308" y="220" width="120" height="80" rx="6" fill="#f8fafc" stroke="#e7e7e7"/>
+  <text x="318" y="242" fill="#64748b" font-family="Segoe UI,sans-serif" font-size="11">Main colour</text>
+  <rect x="318" y="252" width="100" height="36" rx="4" fill="#003580"/>
+  <rect x="448" y="220" width="120" height="80" rx="6" fill="#f8fafc" stroke="#e7e7e7"/>
+  <text x="458" y="242" fill="#64748b" font-family="Segoe UI,sans-serif" font-size="11">Footer</text>
+  <rect x="458" y="252" width="100" height="36" rx="4" fill="#00224f"/>
+  <rect x="308" y="320" width="824" height="100" rx="8" fill="#f0f9ff" stroke="#bae6fd"/>
+  <text x="328" y="350" fill="#003580" font-family="Segoe UI,sans-serif" font-size="13" font-weight="700">Setup instructions</text>
+  <text x="328" y="374" fill="#334155" font-family="Segoe UI,sans-serif" font-size="12">1. Open Google reCAPTCHA admin · 2. Copy site key...</text>
+  <text x="328" y="396" fill="#334155" font-family="Segoe UI,sans-serif" font-size="12">AI chat: choose Grok or GPT, paste API key, enable widget.</text>
+  <rect x="308" y="450" width="140" height="40" rx="6" fill="#0071c2"/>
+  <text x="348" y="476" fill="#fff" font-family="Segoe UI,sans-serif" font-size="14" font-weight="600">Save</text>
+</svg>
