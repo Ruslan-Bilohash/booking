@@ -17,6 +17,20 @@ return array_replace_recursive($en, [
         'contact'    => 'Kontakt',
         'order'      => 'Beställ utveckling',
     ],
+    'billing' => [
+        'text' => '{tagline} · 30 dagars demo',
+        'cta'  => 'BILOHASH-prenumeration',
+    ],
+    'pricing' => [
+        'title' => 'Enkel licensiering',
+        'lead'  => 'Börja med full 30-dagars demo, sedan BILOHASH-prenumeration — ett CMS-skript eller hela biblioteket.',
+        'demo_title' => '30-dagars demo',
+        'demo_price' => 'Gratis',
+        'demo_desc'  => 'Full bokningsdemo + admin på din domän. JSON eller MySQL.',
+        'license_title' => 'BILOHASH-prenumeration',
+        'license_desc'  => '1 CMS-skript på 1 domän (49 NOK/mån) eller alla CMS-skript (249 NOK/mån). Uppdateringar och support.',
+        'cta' => 'BILOHASH-prenumeration',
+    ],
     'hero' => [
         'version_badge' => 'Aktuell version',
         'subtitle' => 'Universellt PHP onlinebokningsskript från {origin} för {country} — hotell, uthyrning, läkar- och tandläkartider, skönhetssalong. Schema.org, adminpanel, JSON och demopriser i {currency}.',
@@ -50,9 +64,10 @@ return array_replace_recursive($en, [
         'steps'      => [
             'Utforska live-demon och skärmdumparna på produktsidan.',
             'Skicka en kort brief via kontaktformuläret: nisch, språk, integrationer.',
-            'Vi svarar med offert, tidsplan och valfritt MySQL-/betalningsomfång.',
+            'Skaffa BILOHASH-prenumeration på bilohash.com/news/wordpress.html#features — 49 kr/mån (1 CMS) eller 249 kr (alla skript) på 1 domän.',
             'Efter avtal — anpassning, staging och lansering på din domän.',
         ],
+        'cta_license' => 'BILOHASH-prenumeration',
         'cta_contact'  => 'Diskutera ditt projekt',
         'cta_demo'     => 'Se live demo',
         'cta_product'  => 'Produktfunktioner',

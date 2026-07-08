@@ -91,18 +91,19 @@
         if (e.key === 'Escape') closeNav();
     });
 
-    var ecoMoreBtn = document.getElementById('bkFooterEcoMoreBtn');
-    var ecoMoreList = document.getElementById('bkFooterEcoMore');
-    if (ecoMoreBtn && ecoMoreList) {
-        ecoMoreBtn.addEventListener('click', function () {
-            var open = !ecoMoreList.classList.contains('is-open');
-            ecoMoreList.classList.toggle('is-open', open);
-            ecoMoreList.hidden = !open;
-            ecoMoreList.setAttribute('aria-hidden', open ? 'false' : 'true');
-            ecoMoreBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-            ecoMoreBtn.textContent = open
-                ? (ecoMoreBtn.getAttribute('data-label-less') || 'Show less')
-                : (ecoMoreBtn.getAttribute('data-label-more') || 'Show more');
+    document.querySelectorAll('[data-eco-more-btn]').forEach(function (btn) {
+        var listId = btn.getAttribute('aria-controls');
+        var list = listId ? document.getElementById(listId) : null;
+        if (!list) return;
+        btn.addEventListener('click', function () {
+            var open = list.hidden;
+            list.hidden = !open;
+            list.setAttribute('aria-hidden', open ? 'false' : 'true');
+            list.classList.toggle('is-open', open);
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            btn.textContent = open
+                ? (btn.getAttribute('data-label-less') || 'Show less')
+                : (btn.getAttribute('data-label-more') || 'Show more');
         });
-    }
+    });
 })();

@@ -56,7 +56,7 @@ function bks_seo_json(array $graphs): string
 
 function bks_site_style_version(): string
 {
-    return '22';
+    return '23';
 }
 
 function bks_critical_css(): string

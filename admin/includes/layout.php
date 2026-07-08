@@ -52,6 +52,21 @@ $adm_main_nav = [
             </a>
             <?php endforeach; ?>
             <p class="adm-nav-label"><?= htmlspecialchars($ta['nav_group_setup'] ?? 'Setup') ?></p>
+            <a href="<?= bk_admin_url('health-console.php') ?>" class="adm-nav-link <?= ($admin_page ?? '') === 'health' ? 'active' : '' ?>">
+                <i class="fas fa-heartbeat" aria-hidden="true"></i>
+                <span class="adm-nav-link-text">
+                    <span class="adm-nav-link-label"><?= htmlspecialchars($ta['health_console'] ?? 'Health') ?></span>
+                </span>
+            </a>
+            <a href="<?= bk_admin_url('license.php') ?>" class="adm-nav-link <?= ($admin_page ?? '') === 'license' ? 'active' : '' ?>">
+                <i class="fas fa-key" aria-hidden="true"></i>
+                <span class="adm-nav-link-text">
+                    <span class="adm-nav-link-label"><?= htmlspecialchars($ta['license'] ?? 'License') ?></span>
+                    <?php if (!empty($ta['nav_desc_license'])): ?>
+                    <span class="adm-nav-link-desc"><?= htmlspecialchars($ta['nav_desc_license']) ?></span>
+                    <?php endif; ?>
+                </span>
+            </a>
             <?php require __DIR__ . '/settings-nav.php'; ?>
             <a href="<?= bk_url('index.php') ?>" class="adm-nav-link" target="_blank" rel="noopener">
                 <i class="fas fa-external-link-alt" aria-hidden="true"></i>

@@ -17,6 +17,21 @@ return [
         'contact'    => 'Kontaktas',
         'order'      => 'Užsakyti kūrimą',
     ],
+    'billing' => [
+        'text' => '{tagline} · 30 dienų demo',
+        'cta'  => 'BILOHASH prenumerata',
+        'link' => 'subscription',
+    ],
+    'pricing' => [
+        'title' => 'Paprasta licencijavimas',
+        'lead'  => 'Pradėkite nuo pilno 30 dienų demo, tada BILOHASH prenumerata — vienas CMS arba visa biblioteka.',
+        'demo_title' => '30 dienų demo',
+        'demo_price' => 'Nemokamai',
+        'demo_desc'  => 'Pilnas rezervacijų demo + admin jūsų domene. JSON arba MySQL.',
+        'license_title' => 'BILOHASH prenumerata',
+        'license_desc'  => '1 CMS skriptas 1 domenui (49 NOK/mėn.) arba visi CMS (249 NOK/mėn.). Atnaujinimai ir palaikymas.',
+        'cta' => 'BILOHASH prenumerata',
+    ],
     'hero' => [
         'badge'    => 'PHP Booking Script · Booking CMS',
         'version_badge' => 'Dabartinė versija',
@@ -144,9 +159,10 @@ return [
         'steps'      => [
             'Peržiūrėkite live demo ir ekrano nuotraukas šiame produkto puslapyje.',
             'Siųskite trumpą užklausą per kontaktų formą: niša, kalbos, integracijos.',
-            'Atsakome su pasiūlymu, terminais ir pasirenkamu MySQL / mokėjimų apimtimi.',
+            'Gaukite BILOHASH prenumeratą bilohash.com/news/wordpress.html#features — 49 kr/mėn. (1 CMS) arba 249 kr (visi skriptai) 1 domenui.',
             'Po sutarties — pritaikymas, staging ir paleidimas jūsų domene.',
         ],
+        'cta_license' => 'BILOHASH prenumerata',
         'cta_contact'  => 'Aptarkite projektą',
         'cta_demo'     => 'Peržiūrėti live demo',
         'cta_product'  => 'Produkto funkcijos',

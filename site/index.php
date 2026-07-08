@@ -185,6 +185,35 @@ require __DIR__ . '/includes/header.php';
     </div>
 </section>
 
+<?php
+require_once dirname(__DIR__) . '/includes/subscription-links.php';
+$pr = $t['pricing'] ?? [];
+if (!empty($pr['title'])):
+?>
+<section class="bks-section bks-pricing-section" id="pricing">
+    <div class="bks-container">
+        <h2 class="bks-section-title"><?= htmlspecialchars((string) $pr['title']) ?></h2>
+        <?php if (!empty($pr['lead'])): ?>
+        <p class="bks-section-sub"><?= htmlspecialchars((string) $pr['lead']) ?></p>
+        <?php endif; ?>
+        <div class="bks-pricing-grid">
+            <article class="bks-pricing-card">
+                <h3><?= htmlspecialchars((string) ($pr['demo_title'] ?? '30-day demo')) ?></h3>
+                <p class="bks-pricing-price"><?= htmlspecialchars((string) ($pr['demo_price'] ?? 'Free')) ?></p>
+                <p><?= htmlspecialchars((string) ($pr['demo_desc'] ?? '')) ?></p>
+            </article>
+            <article class="bks-pricing-card bks-pricing-card--featured">
+                <h3><?= htmlspecialchars((string) ($pr['license_title'] ?? 'BILOHASH subscription')) ?></h3>
+                <p><?= htmlspecialchars((string) ($pr['license_desc'] ?? '')) ?></p>
+                <a href="<?= htmlspecialchars(bk_subscription_url()) ?>" class="bks-btn-primary bks-btn-sm" <?= bk_subscription_external_attrs() ?>>
+                    <?= htmlspecialchars((string) ($pr['cta'] ?? 'Subscribe')) ?>
+                </a>
+            </article>
+        </div>
+    </div>
+</section>
+<?php endif; ?>
+
 <section class="bks-section bks-version-section" id="version">
     <div class="bks-container">
         <h2 class="bks-section-title"><?= htmlspecialchars($t['version']['title'] ?? 'Product version') ?></h2>

@@ -48,6 +48,40 @@ a:hover { text-decoration: underline; }
     min-width: 0;
 }
 
+/* Billing strip */
+.bks-billing-strip {
+    display: block; text-decoration: none; color: inherit;
+    background: linear-gradient(90deg, #ecfdf5, #eff6ff);
+    border-bottom: 1px solid var(--bks-gray-200);
+    font-size: 13px; font-weight: 600;
+}
+.bks-billing-strip:hover { background: linear-gradient(90deg, #d1fae5, #dbeafe); color: inherit; }
+.bks-billing-strip-inner {
+    display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px;
+    padding: 10px 16px; text-align: center;
+}
+.bks-billing-strip i { color: var(--bks-green); }
+.bks-billing-strip-cta {
+    padding: 2px 10px; border-radius: 999px; background: rgba(0, 53, 128, .1); color: var(--bks-blue);
+    font-size: 12px;
+}
+.bks-pricing-section { background: var(--bks-gray-50); }
+.bks-pricing-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 20px;
+}
+.bks-pricing-card {
+    background: var(--bks-white); border: 1px solid var(--bks-gray-200); border-radius: var(--bks-radius-lg);
+    padding: 24px; box-shadow: var(--bks-shadow);
+}
+.bks-pricing-card--featured { border-color: var(--bks-blue-light); box-shadow: var(--bks-shadow-lg); }
+.bks-pricing-price { font-size: 1.75rem; font-weight: 800; color: var(--bks-blue); margin: 8px 0 12px; }
+@media (max-width: 767px) {
+    .bks-billing-strip-inner { flex-direction: column; align-items: stretch; }
+    .bks-billing-strip-cta { text-align: center; }
+    .bks-pricing-grid { grid-template-columns: 1fr; }
+    .bks-pricing-card .bks-btn-primary { width: 100%; justify-content: center; }
+}
+
 /* Header */
 :root {
     --bks-header-h: 56px;
@@ -1492,5 +1526,40 @@ a.bks-demo-card:hover {
     font-size: 14px;
     line-height: 1.55;
     color: var(--bks-gray-700, #374151);
+}
+.bks-help { margin: 12px 0 0; font-size: 14px; line-height: 1.55; color: var(--bks-gray-700); }
+.bks-order-heading--sm { font-size: 1.1rem; margin-top: 24px; }
+.bks-di-grid { display: grid; gap: 32px; }
+.bks-di-plans { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 16px; }
+.bks-di-plan-pill {
+    font-size: 13px; font-weight: 600; padding: 8px 14px; border-radius: 999px;
+    background: #eff6ff; color: var(--bks-blue-light); border: 1px solid #bfdbfe;
+}
+.bks-di-plan-pill--full { background: #f0fdf4; color: #15803d; border-color: #bbf7d0; }
+.bks-di-form-block { max-width: 520px; }
+.bks-di-cabinet-alt { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--bks-gray-200); }
+.bks-di-cabinet-alt .bks-btn-outline { margin-top: 10px; display: inline-flex; align-items: center; gap: 8px; }
+.bks-di-tabs { display: flex; gap: 8px; margin-bottom: 16px; }
+.bks-di-tab {
+    flex: 1; padding: 10px 12px; border: 1px solid var(--bks-gray-200); border-radius: 10px;
+    background: #fff; font-weight: 600; font-size: 13px; cursor: pointer;
+}
+.bks-di-tab.is-active { border-color: var(--bks-blue-light); background: #eff6ff; color: var(--bks-blue); }
+.bks-di-panel[hidden] { display: none !important; }
+.bks-di-cabinet-hint { margin: 0 0 14px; padding: 12px 14px; border-radius: 10px; background: #fffbeb; border: 1px solid #fde68a; color: #92400e; font-size: 14px; line-height: 1.5; }
+.bks-di-cabinet-hint a { color: var(--bks-blue-light); font-weight: 700; }
+.bks-di-form .bks-field { margin-bottom: 14px; }
+.bks-di-form label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+.bks-input {
+    width: 100%; padding: 10px 12px; border: 1px solid var(--bks-gray-200); border-radius: 8px; font-size: 15px;
+}
+.bks-di-terms { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; margin: 16px 0; }
+.bks-di-terms a { color: var(--bks-blue-light); font-weight: 600; }
+.bks-di-message { margin-top: 12px; font-size: 14px; font-weight: 600; }
+.bks-di-message.is-ok { color: #15803d; }
+.bks-di-message.is-error { color: #b91c1c; }
+.bks-di-warn { color: #b45309; }
+@media (min-width: 768px) {
+    .bks-di-grid { grid-template-columns: 1fr 1fr; align-items: start; }
 }
 

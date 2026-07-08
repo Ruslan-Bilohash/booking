@@ -50,6 +50,22 @@ body.bk-nav-open .bk-top-bar {
     z-index: 150;
 }
 
+/* Billing / subscription strip */
+.bk-billing-strip {
+    display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px;
+    padding: 8px 16px; font-size: 12px; font-weight: 600; text-align: center;
+    background: linear-gradient(90deg, #ecfdf5, #eff6ff); color: var(--bk-blue-dark);
+    border-bottom: 1px solid var(--bk-gray-200);
+    text-decoration: none;
+}
+.bk-billing-strip:hover { background: linear-gradient(90deg, #d1fae5, #dbeafe); color: var(--bk-blue-dark); }
+.bk-billing-strip i { color: var(--bk-green); }
+.bk-billing-strip-cta {
+    display: inline-flex; align-items: center; gap: 4px;
+    padding: 2px 10px; border-radius: 999px; background: rgba(0, 53, 128, .1); color: var(--bk-blue);
+    font-size: 11px; white-space: nowrap;
+}
+
 /* Demo strip */
 .bk-demo-strip {
     display: flex;

@@ -23,11 +23,23 @@ $seo_og_type  = $seo_og_type ?? 'website';
     <link rel="stylesheet" href="<?= htmlspecialchars(cms_contact_stylesheet_href()) ?>">
     <?php endif; ?>
     <?php bk_render_favicon_tag(bk_site_settings()); ?>
+    <?php
+    require_once __DIR__ . '/analytics-settings.php';
+    bk_render_tracking_snippets(bk_site_settings());
+    $customHead = trim((string) (bk_site_settings()['custom_head_code'] ?? ''));
+    if ($customHead !== '') {
+        echo $customHead;
+    }
+    ?>
     <?php bk_render_seo_social($page_title, $page_desc, bk_absolute_url($canonical), $seo_og_image, $seo_og_type ?? 'website'); ?>
 </head>
 <body class="<?= htmlspecialchars($body_class) ?>">
 
 <div class="bk-top-bar">
+<?php
+require_once __DIR__ . '/billing-pricing.php';
+bk_billing_render_demo_banner($t, $lang);
+?>
 <div class="bk-demo-strip" role="status">
     <div class="bk-demo-strip-main">
         <i class="fas fa-hard-hat" aria-hidden="true"></i>

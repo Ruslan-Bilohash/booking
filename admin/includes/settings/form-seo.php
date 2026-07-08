@@ -55,6 +55,20 @@
                         <?= htmlspecialchars(bk_settings_admin_label('seo_schema_breadcrumbs', $ta)) ?>
                     </label>
                 </div>
+                <div class="adm-field adm-field-check adm-field-full">
+                    <label><input type="checkbox" name="seo_schema_website" value="1" <?= !empty($settings['seo_schema_website']) ? 'checked' : '' ?>> <?= htmlspecialchars(bk_settings_admin_label('seo_schema_website', $ta)) ?></label>
+                </div>
+                <div class="adm-field adm-field-check adm-field-full">
+                    <label><input type="checkbox" name="seo_schema_organization" value="1" <?= !empty($settings['seo_schema_organization']) ? 'checked' : '' ?>> <?= htmlspecialchars(bk_settings_admin_label('seo_schema_organization', $ta)) ?></label>
+                </div>
+            </div>
+            <h3 class="adm-subhead"><?= htmlspecialchars(bk_settings_admin_label('sitemap_section', $ta)) ?></h3>
+            <label class="adm-toggle"><input type="checkbox" name="sitemap_enabled" value="1" <?= !empty($settings['sitemap_enabled']) ? 'checked' : '' ?>><span><?= htmlspecialchars(bk_settings_admin_label('sitemap_enabled', $ta)) ?></span></label>
+            <label class="adm-toggle"><input type="checkbox" name="sitemap_include_properties" value="1" <?= !empty($settings['sitemap_include_properties']) ? 'checked' : '' ?>><span><?= htmlspecialchars(bk_settings_admin_label('sitemap_include_properties', $ta)) ?></span></label>
+            <label class="adm-toggle"><input type="checkbox" name="sitemap_include_verticals" value="1" <?= !empty($settings['sitemap_include_verticals']) ? 'checked' : '' ?>><span><?= htmlspecialchars(bk_settings_admin_label('sitemap_include_verticals', $ta)) ?></span></label>
+            <div class="adm-form-grid adm-form-grid--settings">
+                <div class="adm-field"><label><?= htmlspecialchars(bk_settings_admin_label('sitemap_priority_home', $ta)) ?></label><input type="text" name="sitemap_priority_home" value="<?= htmlspecialchars($settings['sitemap_priority_home'] ?? '1.0') ?>"></div>
+                <div class="adm-field"><label><?= htmlspecialchars(bk_settings_admin_label('sitemap_priority_property', $ta)) ?></label><input type="text" name="sitemap_priority_property" value="<?= htmlspecialchars($settings['sitemap_priority_property'] ?? '0.8') ?>"></div>
             </div>
         </div>
     </div>

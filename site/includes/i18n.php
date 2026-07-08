@@ -57,3 +57,9 @@ require_once __DIR__ . '/helpers.php';
 
 $t = bks_apply_market_translations($t, $lang);
 $GLOBALS['bks_market'] = bks_market($lang);
+
+$diFile = __DIR__ . '/../lang/demo-install.php';
+if (is_file($diFile)) {
+    $diAll = require $diFile;
+    $t['demo_install'] = $diAll[$lang] ?? $diAll['en'] ?? [];
+}

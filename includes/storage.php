@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/database.php';
+
 function bk_data_path(string $file): string
 {
     return __DIR__ . '/../data/' . $file;
@@ -29,6 +31,15 @@ function bk_default_settings(): array
 function bk_load_settings(): array
 {
     require_once __DIR__ . '/site-settings.php';
+    if (bk_uses_mysql()) {
+        $data = bk_db_load_settings();
+        if ($data === []) {
+            $defaults = bk_default_settings();
+            bk_save_settings($defaults);
+            return $defaults;
+        }
+        return bk_merge_settings($data);
+    }
     $file = bk_settings_file();
     if (!is_file($file)) {
         $defaults = bk_default_settings();
@@ -43,6 +54,9 @@ function bk_save_settings(array $settings): bool
 {
     require_once __DIR__ . '/site-settings.php';
     $merged = bk_merge_settings($settings);
+    if (bk_uses_mysql()) {
+        return bk_db_save_settings($merged);
+    }
     $json = json_encode($merged, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
     return file_put_contents(bk_settings_file(), $json, LOCK_EX) !== false;
 }
@@ -94,6 +108,17 @@ function bk_reviews_seed(): array
 
 function bk_load_reviews_raw(): array
 {
+    if (bk_uses_mysql()) {
+        $data = bk_db_load_reviews();
+        if ($data !== []) {
+            return $data;
+        }
+        $seed = bk_reviews_seed();
+        if ($seed !== []) {
+            bk_save_reviews($seed);
+        }
+        return $seed;
+    }
     bk_ensure_reviews_json();
     $file = bk_reviews_file();
     if (is_file($file)) {
@@ -107,6 +132,9 @@ function bk_load_reviews_raw(): array
 
 function bk_save_reviews(array $list): bool
 {
+    if (bk_uses_mysql()) {
+        return bk_db_save_reviews(array_values($list));
+    }
     $json = json_encode(array_values($list), JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
     return file_put_contents(bk_reviews_file(), $json, LOCK_EX) !== false;
 }
@@ -290,6 +318,17 @@ function bk_sync_seed_images(): void
 
 function bk_load_properties_raw(): array
 {
+    if (bk_uses_mysql()) {
+        $data = bk_db_load_properties();
+        if ($data === []) {
+            bk_ensure_properties_json();
+            $data = json_decode(file_get_contents(bk_properties_file()) ?: '[]', true);
+            if (is_array($data) && $data !== []) {
+                bk_db_save_properties($data);
+            }
+        }
+        return is_array($data) ? $data : [];
+    }
     bk_ensure_properties_json();
     bk_sync_seed_images();
     bk_sync_seed_property_extras();
@@ -300,12 +339,24 @@ function bk_load_properties_raw(): array
 
 function bk_save_properties(array $list): bool
 {
+    if (bk_uses_mysql()) {
+        return bk_db_save_properties(array_values($list));
+    }
     $json = json_encode(array_values($list), JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
     return file_put_contents(bk_properties_file(), $json, LOCK_EX) !== false;
 }
 
 function bk_load_bookings(): array
 {
+    if (bk_uses_mysql()) {
+        $data = bk_db_load_bookings();
+        if ($data === []) {
+            bk_seed_demo_bookings();
+            return bk_db_load_bookings();
+        }
+        bk_merge_demo_bookings($data);
+        return $data;
+    }
     $file = bk_bookings_file();
     if (!is_file($file)) {
         bk_seed_demo_bookings();
@@ -398,6 +449,9 @@ function bk_seed_demo_bookings_to(array &$samples): void
 
 function bk_save_bookings(array $list): bool
 {
+    if (bk_uses_mysql()) {
+        return bk_db_save_bookings(array_values($list));
+    }
     $json = json_encode(array_values($list), JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
     return file_put_contents(bk_bookings_file(), $json, LOCK_EX) !== false;
 }

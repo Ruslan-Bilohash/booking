@@ -1,6 +1,16 @@
 <?php
 require_once dirname(__DIR__) . '/init.php';
 require_once dirname(__DIR__) . '/includes/admin-auth.php';
+if (is_file(dirname(__DIR__) . '/includes/license-runtime.php')) {
+    require_once dirname(__DIR__) . '/includes/license-runtime.php';
+    bk_license_state();
+    if (bk_admin_logged()) {
+        bk_license_sync_registry_if_needed(false);
+        if (function_exists('bk_license_require_admin')) {
+            bk_license_require_admin();
+        }
+    }
+}
 require_once dirname(__DIR__) . '/includes/storage.php';
 require_once dirname(__DIR__) . '/includes/site-settings.php';
 

@@ -4,46 +4,69 @@
  * All data stored in booking/data/settings.json
  */
 
+function bk_seo_settings_defaults(): array
+{
+    return [
+        'seo_site_name'             => '',
+        'seo_default_og_image'      => '',
+        'seo_org_name'              => '',
+        'seo_geo_region'            => 'NO',
+        'seo_geo_placename'         => 'Norway',
+        'seo_twitter_site'          => '',
+        'seo_default_country_code'  => 'NO',
+        'seo_schema_lodging'        => true,
+        'seo_schema_product'        => true,
+        'seo_schema_breadcrumbs'    => true,
+        'seo_schema_website'        => true,
+        'seo_schema_organization'   => true,
+        'sitemap_enabled'           => true,
+        'sitemap_include_properties'=> true,
+        'sitemap_include_verticals' => true,
+        'sitemap_priority_home'     => '1.0',
+        'sitemap_priority_property' => '0.8',
+        'sitemap_last_generated'    => '',
+    ];
+}
+
 function bk_settings_defaults(): array
 {
     require_once __DIR__ . '/payment-settings.php';
-    return [
-        'chat_enabled'         => false,
-        'chat_provider'        => 'none',
-        'chat_api_key'         => '',
-        'chat_instructions'    => '',
-        'recaptcha_enabled'    => true,
-        'recaptcha_site_key'   => '',
-        'recaptcha_secret_key' => '',
-        'color_primary'        => '#003580',
-        'color_button'         => '#003580',
-        'color_button_hover'   => '#00224f',
-        'color_footer'         => '#00224f',
-        'bg_color'             => '',
-        'bg_image'             => '',
-        'favicon_preset'       => 'default',
-        'favicon_letter'       => 'B',
-        'favicon_url'          => '',
-        'seo_site_name'        => '',
-        'seo_default_og_image' => '',
-        'seo_org_name'         => '',
-        'seo_geo_region'       => 'NO',
-        'seo_geo_placename'    => 'Norway',
-        'seo_twitter_site'     => '',
-        'seo_schema_lodging'   => true,
-        'seo_schema_product'   => true,
-        'seo_schema_breadcrumbs' => true,
-        'seo_default_country_code' => 'NO',
-        'taxes' => bk_default_tax_settings(),
-        'paypal' => bk_default_payment_providers()['paypal'],
-        'stripe' => bk_default_payment_providers()['stripe'],
-        'vipps' => bk_default_payment_providers()['vipps'],
-    ];
+    require_once __DIR__ . '/analytics-settings.php';
+    require_once __DIR__ . '/smtp-settings.php';
+    require_once __DIR__ . '/telegram-notify.php';
+    require_once __DIR__ . '/ai-settings.php';
+    require_once __DIR__ . '/advanced-settings.php';
+    require_once __DIR__ . '/ecosystem-load.php';
+    bk_require_ecosystem('bh-cms-site-settings.php');
+    return array_merge(
+        bh_cms_site_settings_defaults(bh_cms_product_accent('booking')),
+        bk_seo_settings_defaults(),
+        bk_analytics_defaults(),
+        bk_smtp_defaults(),
+        bk_telegram_defaults(),
+        bk_ai_defaults(),
+        bk_advanced_defaults(),
+        [
+            'color_footer'         => '#00224f',
+            'favicon_preset'       => 'default',
+            'favicon_letter'       => 'B',
+            'favicon_url'          => '',
+            'taxes' => bk_default_tax_settings(),
+            'paypal' => bk_default_payment_providers()['paypal'],
+            'stripe' => bk_default_payment_providers()['stripe'],
+            'vipps' => bk_default_payment_providers()['vipps'],
+        ]
+    );
 }
 
 function bk_merge_settings(array $settings): array
 {
     require_once __DIR__ . '/payment-settings.php';
+    require_once __DIR__ . '/analytics-settings.php';
+    require_once __DIR__ . '/smtp-settings.php';
+    require_once __DIR__ . '/telegram-notify.php';
+    require_once __DIR__ . '/ai-settings.php';
+    require_once __DIR__ . '/advanced-settings.php';
     $defaults = bk_settings_defaults();
     $merged = array_merge($defaults, $settings);
     foreach (['taxes', 'paypal', 'stripe', 'vipps'] as $key) {
@@ -55,7 +78,7 @@ function bk_merge_settings(array $settings): array
             is_array($merged[$key] ?? null) ? $merged[$key] : []
         );
     }
-    return $merged;
+    return bk_advanced_merge(bk_ai_merge(bk_telegram_merge(bk_smtp_merge(bk_analytics_merge($merged)))));
 }
 
 function bk_settings_apply_post(string $section, array $post, array $settings): array
@@ -100,22 +123,80 @@ function bk_settings_apply_post(string $section, array $post, array $settings): 
             $settings['seo_schema_lodging'] = !empty($post['seo_schema_lodging']);
             $settings['seo_schema_product'] = !empty($post['seo_schema_product']);
             $settings['seo_schema_breadcrumbs'] = !empty($post['seo_schema_breadcrumbs']);
+            $settings['seo_schema_website'] = !empty($post['seo_schema_website']);
+            $settings['seo_schema_organization'] = !empty($post['seo_schema_organization']);
+            $settings['sitemap_enabled'] = !empty($post['sitemap_enabled']);
+            $settings['sitemap_include_properties'] = !empty($post['sitemap_include_properties']);
+            $settings['sitemap_include_verticals'] = !empty($post['sitemap_include_verticals']);
+            $settings['sitemap_priority_home'] = bk_sitemap_priority($post['sitemap_priority_home'] ?? '1.0', '1.0');
+            $settings['sitemap_priority_property'] = bk_sitemap_priority($post['sitemap_priority_property'] ?? '0.8', '0.8');
             $cc = strtoupper(trim($post['seo_default_country_code'] ?? 'NO'));
             $settings['seo_default_country_code'] = preg_match('/^[A-Z]{2}$/', $cc) ? $cc : 'NO';
+            break;
+        case 'analytics':
+            require_once __DIR__ . '/analytics-settings.php';
+            $settings = bk_analytics_apply_post($post, $settings);
+            break;
+        case 'smtp':
+            require_once __DIR__ . '/smtp-settings.php';
+            $settings = bk_smtp_apply_post($post, $settings);
+            break;
+        case 'telegram':
+            require_once __DIR__ . '/telegram-notify.php';
+            $settings = bk_telegram_apply_post($post, $settings);
+            break;
+        case 'ai':
+            require_once __DIR__ . '/ai-settings.php';
+            $settings = bk_ai_apply_post($post, $settings);
+            break;
+        case 'advanced':
+            require_once __DIR__ . '/advanced-settings.php';
+            $settings = bk_advanced_apply_post($post, $settings);
+            break;
+        case 'languages':
+            require_once __DIR__ . '/advanced-settings.php';
+            $settings = bk_advanced_apply_post($post, $settings);
             break;
     }
     return $settings;
 }
 
+function bk_sitemap_priority(string $value, string $fallback): string
+{
+    $v = (float) str_replace(',', '.', trim($value));
+    if ($v < 0.0 || $v > 1.0) {
+        return $fallback;
+    }
+    return number_format($v, 1, '.', '');
+}
+
 function bk_settings_tabs(): array
 {
     return [
-        'appearance' => ['file' => 'settings-appearance.php', 'icon' => 'palette'],
-        'taxes'      => ['file' => 'settings-taxes.php',      'icon' => 'percent'],
-        'payments'   => ['file' => 'settings-payments.php',   'icon' => 'credit-card'],
-        'recaptcha'  => ['file' => 'settings-recaptcha.php',  'icon' => 'shield-alt'],
-        'chat'       => ['file' => 'settings-chat.php',       'icon' => 'robot'],
-        'seo'        => ['file' => 'settings-seo.php',        'icon' => 'chart-line'],
+        'appearance' => ['file' => 'settings-appearance.php', 'icon' => 'palette', 'group' => 'general'],
+        'languages'  => ['file' => 'settings-languages.php',  'icon' => 'language', 'group' => 'general'],
+        'taxes'      => ['file' => 'settings-taxes.php',      'icon' => 'percent', 'group' => 'commerce'],
+        'payments'   => ['file' => 'settings-payments.php',   'icon' => 'credit-card', 'group' => 'commerce'],
+        'recaptcha'  => ['file' => 'settings-recaptcha.php',  'icon' => 'shield-alt', 'group' => 'security'],
+        'chat'       => ['file' => 'settings-chat.php',       'icon' => 'robot', 'group' => 'integrations'],
+        'ai'         => ['file' => 'settings-ai.php',         'icon' => 'brain', 'group' => 'integrations'],
+        'smtp'       => ['file' => 'settings-smtp.php',       'icon' => 'envelope', 'group' => 'integrations'],
+        'telegram'   => ['file' => 'settings-telegram.php',   'icon' => 'paper-plane', 'group' => 'integrations'],
+        'seo'        => ['file' => 'settings-seo.php',        'icon' => 'chart-line', 'group' => 'marketing'],
+        'analytics'  => ['file' => 'settings-analytics.php',  'icon' => 'chart-pie', 'group' => 'marketing'],
+        'advanced'   => ['file' => 'settings-advanced.php',   'icon' => 'sliders-h', 'group' => 'advanced'],
+    ];
+}
+
+function bk_settings_tab_groups(): array
+{
+    return [
+        'general'       => ['label' => 'settings_group_general', 'tabs' => ['appearance', 'languages']],
+        'commerce'      => ['label' => 'settings_group_commerce', 'tabs' => ['taxes', 'payments']],
+        'security'      => ['label' => 'settings_group_security', 'tabs' => ['recaptcha']],
+        'integrations'  => ['label' => 'settings_group_integrations', 'tabs' => ['chat', 'ai', 'smtp', 'telegram']],
+        'marketing'     => ['label' => 'settings_group_seo', 'tabs' => ['seo', 'analytics']],
+        'advanced'      => ['label' => 'settings_group_advanced', 'tabs' => ['advanced']],
     ];
 }
 
@@ -148,12 +229,23 @@ function bk_settings_nav_groups(): array
             'label' => 'settings_group_integrations',
             'items' => [
                 ['type' => 'tab', 'key' => 'chat'],
+                ['type' => 'tab', 'key' => 'ai'],
+                ['type' => 'tab', 'key' => 'smtp'],
+                ['type' => 'tab', 'key' => 'telegram'],
             ],
         ],
         [
             'label' => 'settings_group_seo',
             'items' => [
                 ['type' => 'tab', 'key' => 'seo'],
+                ['type' => 'tab', 'key' => 'analytics'],
+            ],
+        ],
+        [
+            'label' => 'settings_group_advanced',
+            'items' => [
+                ['type' => 'tab', 'key' => 'languages'],
+                ['type' => 'tab', 'key' => 'advanced'],
             ],
         ],
     ];
@@ -264,7 +356,60 @@ function bk_settings_admin_label(string $key, array $ta = []): string
         'settings_tab_recaptcha' => 'reCAPTCHA',
         'settings_tab_chat'      => 'AI Chat',
         'settings_tab_seo'       => 'SEO & Schema',
+        'settings_tab_analytics' => 'Analytics',
+        'settings_tab_smtp'      => 'SMTP & Email',
+        'settings_tab_telegram'  => 'Telegram',
+        'settings_tab_ai'        => 'AI Settings',
+        'settings_tab_advanced'  => 'Advanced',
+        'settings_tab_languages' => 'Languages',
         'settings_group_general'      => 'General',
+        'settings_group_advanced'     => 'Advanced',
+        'analytics_section'    => 'Tracking & pixels',
+        'analytics_help'       => 'Google Analytics, Meta Pixel and Google Ads conversion tracking.',
+        'tracking_gtag_id'     => 'Google Analytics (gtag.js) ID',
+        'tracking_meta_pixel'  => 'Meta Pixel ID',
+        'tracking_tiktok_pixel'=> 'TikTok Pixel ID',
+        'google_ads_section'   => 'Google Ads',
+        'google_ads_enabled'   => 'Enable Google Ads tracking',
+        'google_ads_id'        => 'Google Ads ID (AW-…)',
+        'google_ads_conversion_label' => 'Conversion label',
+        'smtp_section'         => 'Outbound email (SMTP)',
+        'smtp_enabled'         => 'Enable SMTP',
+        'smtp_host'            => 'SMTP host',
+        'smtp_port'            => 'Port',
+        'smtp_encryption'      => 'Encryption',
+        'smtp_username'        => 'Username',
+        'smtp_password'        => 'Password (leave blank to keep)',
+        'smtp_from_email'      => 'From email',
+        'smtp_from_name'       => 'From name',
+        'booking_notify_email' => 'Booking notification email',
+        'telegram_section'     => 'Telegram notifications',
+        'telegram_enabled'     => 'Enable Telegram bot',
+        'telegram_notify_bookings' => 'Notify on new bookings',
+        'telegram_bot_token'   => 'Bot token (leave blank to keep)',
+        'telegram_chat_id'     => 'Chat ID',
+        'ai_section'           => 'AI automation',
+        'ai_enabled'           => 'Enable AI features',
+        'ai_provider'          => 'Provider',
+        'ai_model'             => 'Default model',
+        'ai_api_key'           => 'API key (leave blank to keep)',
+        'ai_prompt_seo'        => 'SEO generation prompt',
+        'advanced_section'     => 'Maintenance & custom code',
+        'maintenance_mode'     => 'Maintenance mode (public site only)',
+        'maintenance_message'  => 'Maintenance message',
+        'cookie_consent'       => 'Show cookie consent banner',
+        'custom_head_code'     => 'Custom &lt;head&gt; code',
+        'custom_footer_code'   => 'Custom footer code',
+        'languages_section'    => 'Enabled languages',
+        'languages_help'       => 'Choose which languages appear on the public booking site.',
+        'sitemap_section'      => 'XML Sitemap',
+        'sitemap_enabled'      => 'Enable sitemap.xml',
+        'sitemap_include_properties' => 'Include property pages',
+        'sitemap_include_verticals'  => 'Include vertical landing pages',
+        'sitemap_priority_home'      => 'Homepage priority',
+        'sitemap_priority_property'=> 'Property priority',
+        'seo_schema_website'       => 'WebSite schema on homepage',
+        'seo_schema_organization'  => 'Organization schema',
         'settings_group_commerce'     => 'Taxes & payments',
         'settings_group_security'     => 'Security',
         'settings_group_integrations' => 'Integrations',
@@ -535,7 +680,7 @@ function bk_render_chat_widget(?array $settings = null, ?string $lang = null): v
 
 function bk_public_style_version(): string
 {
-    return '43';
+    return '44';
 }
 
 function bk_critical_css(): string

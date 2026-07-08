@@ -17,6 +17,21 @@ return [
         'contact'    => 'Contact',
         'order'      => 'Order development',
     ],
+    'billing' => [
+        'text' => '{tagline} · 30-day demo',
+        'cta'  => 'BILOHASH subscription',
+        'link' => 'subscription',
+    ],
+    'pricing' => [
+        'title' => 'Simple licensing',
+        'lead'  => 'Start with a full 30-day demo, then choose the unified BILOHASH subscription — one CMS script or the full library.',
+        'demo_title' => '30-day demo',
+        'demo_price' => 'Free',
+        'demo_desc'  => 'Full booking demo + admin on your domain. JSON or MySQL.',
+        'license_title' => 'BILOHASH subscription',
+        'license_desc'  => '1 CMS script on 1 domain (49 NOK/mo) or all CMS scripts (249 NOK/mo). Updates and support included.',
+        'cta' => 'BILOHASH subscription',
+    ],
     'hero' => [
         'badge'    => 'PHP Booking Script · Booking CMS',
         'version_badge' => 'Current release',
@@ -151,9 +166,10 @@ return [
         'steps'      => [
             'Browse the live demo and screenshots on this product page.',
             'Send a short brief via the contact form: niche, languages, integrations.',
-            'We reply with quote, timeline and optional MySQL / payment scope.',
+            'Get the unified BILOHASH subscription at bilohash.com/news/wordpress.html#features — 49 kr/mo (1 CMS) or 249 kr (all scripts) on 1 domain.',
             'After agreement — customization, staging and launch on your domain.',
         ],
+        'cta_license' => 'BILOHASH subscription',
         'cta_contact'  => 'Discuss your project',
         'cta_demo'     => 'View live demo',
         'cta_product'  => 'Product features',

@@ -20,7 +20,10 @@ $seo_schemas = $seo_schemas ?? bks_seo_schemas(bks_absolute_url($canonical), $pa
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23003580' width='100' height='100' rx='12'/><text x='50' y='58' font-size='36' text-anchor='middle' fill='%23febb02' font-family='sans-serif' font-weight='bold'>B</text></svg>">
 </head>
 <body>
-
+<?php
+require_once dirname(__DIR__, 2) . '/includes/billing-pricing.php';
+bk_billing_render_site_banner($t, $lang);
+?>
 <header class="bks-header" id="bksHeader">
     <div class="bks-header-inner">
         <a href="<?= bks_url('index.php') ?>" class="bks-logo">

@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/init.php';
 require_once dirname(__DIR__) . '/includes/cms-contact.php';
+require_once __DIR__ . '/includes/subscription-links.php';
 
 $current_page = 'order';
 $o = $t['order'] ?? [];
@@ -38,6 +39,7 @@ require __DIR__ . '/includes/header.php';
             <a href="<?= bk_url('contact.php') ?>" class="bk-btn-blue"><i class="fas fa-comments"></i> <?= htmlspecialchars($o['cta_contact'] ?? $cms_discuss) ?></a>
             <a href="<?= bk_url('index.php') ?>" class="bk-btn-outline-dark"><i class="fas fa-play-circle"></i> <?= htmlspecialchars($o['cta_demo'] ?? '') ?></a>
             <a href="<?= bk_url('site/') ?>" class="bk-btn-outline-dark"><i class="fas fa-book"></i> <?= htmlspecialchars($o['cta_product'] ?? '') ?></a>
+            <a href="<?= htmlspecialchars(bk_subscription_url()) ?>" class="bk-btn-outline-dark" <?= bk_subscription_external_attrs() ?>><i class="fas fa-crown"></i> <?= htmlspecialchars($o['cta_license'] ?? 'BILOHASH subscription') ?></a>
         </div>
     </section>
 
