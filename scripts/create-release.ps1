@@ -55,7 +55,9 @@ foreach ($asset in $assets) {
     $zip = Join-Path $root $asset.Zip
     if ($asset.Source -like '*.zip') {
         if (-not (Test-Path $asset.Source)) { throw "Missing: $($asset.Source)" }
-        Copy-Item $asset.Source $zip -Force
+        if ((Resolve-Path $asset.Source).Path -ne (Resolve-Path $zip -ErrorAction SilentlyContinue).Path) {
+            Copy-Item $asset.Source $zip -Force
+        }
     } else {
         if (Test-Path $zip) { Remove-Item $zip -Force }
         if (-not (Test-Path $asset.Source)) { throw "Missing folder: $($asset.Source)" }
