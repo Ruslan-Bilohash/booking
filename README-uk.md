@@ -2,10 +2,11 @@
 
 Універсальний **PHP-скрипт бронювання** для будь-якого бізнесу з резерваціями — готелі, оренда житла, лікарі та стоматологи, салони краси, SPA, фітнес і інше. Постачається як демо у стилі Booking.com; налаштуйте підписи, типи оголошень і робочі процеси під свою нішу. Багатомовний фронтенд, пошук, демо-бронювання, відгуки гостей і адмін-панель. Портфоліо-проєкт [Руслана Білогаша](https://bilohash.com/).
 
-**Версія:** 1.2.0 · **Мови:** [English](README.md) · [Norsk](README-no.md) · [Українська](README-uk.md) · [Русский](README-ru.md)
+**Версія:** 1.3.0 · **Мови:** [English](README.md) · [Norsk](README-no.md) · [Українська](README-uk.md) · [Русский](README-ru.md)
 
 ![PHP](https://img.shields.io/badge/PHP-8%2B-777BB4?logo=php&logoColor=white)
-![Version](https://img.shields.io/badge/version-1.2.0-blue)
+![Version](https://img.shields.io/badge/version-1.3.0-blue)
+![Release](https://img.shields.io/github/v/release/Ruslan-Bilohash/booking?label=release)
 ![i18n](https://img.shields.io/badge/languages-NO%20%7C%20EN%20%7C%20UA%20%7C%20RU-green)
 
 ## Live demo
@@ -19,6 +20,10 @@
 | **Рішення** | https://bilohash.com/booking/solutions.php |
 | **Sitemap** | https://bilohash.com/booking/sitemap.php |
 | **Новина про реліз** | https://bilohash.com/news/booking-cms.html |
+| **Демо-установка 30 днів** | https://bilohash.com/booking/site/demo-install.php |
+| **Завантаження (кабінет)** | https://bilohash.com/ecosystem/cabinet.php |
+| **Вступити в екосистему** | https://bilohash.com/ecosystem/join.php |
+| **GitHub release** | https://github.com/Ruslan-Bilohash/booking/releases/tag/v1.3.0 |
 
 **Вхід в адмінку (демо):** `demo` / `bilobook2026`
 
@@ -47,13 +52,20 @@
 
 ### Маркетинговий сайт (`/site/`)
 - Лендінг продукту Booking CMS
-- Мови: NO, EN, UA, RU, LT
+- **`demo-install.php`** — сторінка 30-денного демо для self-host (NO, EN, UA, RU, SV, LT)
+- Мови: NO, EN, UA, RU, LT, SV
 - Галерея скріншотів, версія та технічний стек
+
+### Комерційний пакет установки (v1.3.0)
+- **`booking.zip`** — 30-денний пробний архів для хостингу клієнта (1 домен на план BILOHASH)
+- **`install.php`** — майстер MySQL з демо-даними, адміном і опційним ключем **BHBOOK**
+- Завантаження через [кабінет клієнта](https://bilohash.com/ecosystem/cabinet.php) після входу та згоди з умовами
+- Ліцензія: пробний період, перевірка **BHBOOK** через API bilohash.com
 
 ## Технології
 
 - PHP 8+ (без фреймворку)
-- JSON-сховище (`data/*.json`) — MySQL за запитом
+- JSON-сховище (`data/*.json`) для демо bilohash.com · **MySQL** для комерційної установки (`schema.sql`, `install.php`)
 - Модульна i18n (`lang/*.php`)
 - Apache `.htaccess`, SEO (canonical, hreflang, Schema.org, sitemap)
 - OpenStreetMap embed + маршрути Google Maps (без API-ключа)
@@ -67,6 +79,8 @@
 
 ## Встановлення
 
+### Варіант A — Git clone (розробка / JSON-демо)
+
 1. Клонуйте або скопіюйте папку `booking/` у корінь сайту:
    ```bash
    git clone https://github.com/Ruslan-Bilohash/booking.git booking
@@ -77,6 +91,15 @@
    chmod 755 data
    ```
 4. Відкрийте `https://ваш-домен.com/booking/` — демо-об'єкти створюються автоматично при першому завантаженні.
+
+### Варіант B — 30-денне комерційне демо (MySQL)
+
+1. Оформіть підписку на [bilohash.com/ecosystem/join.php](https://bilohash.com/ecosystem/join.php) і завантажте **`booking.zip`** з [кабінету клієнта](https://bilohash.com/ecosystem/cabinet.php).
+2. Завантажте та розпакуйте в `/public_html/booking/` на вашому хостингу.
+3. Відкрийте `https://ваш-домен.com/booking/install.php` і пройдіть майстер MySQL (демо-дані + адмін).
+4. За бажанням введіть ключ **BHBOOK** під час установки або пізніше в адмінці.
+
+Готовий архів: [GitHub release v1.3.0](https://github.com/Ruslan-Bilohash/booking/releases/tag/v1.3.0) (`booking-install-v1.3.0.zip`).
 
 ### Локальний PHP-сервер (розробка)
 

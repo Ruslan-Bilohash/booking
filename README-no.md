@@ -2,10 +2,11 @@
 
 Universelt **PHP-bestillingsskript** for alle typer reservasjoner — hoteller, leieboliger, legetimer og tannlege, skjønnhetssalonger, spa, trening og mer. Leveres som en Booking.com-lignende hotell-demo; tilpass etiketter, listetyper og arbeidsflyt til din bransje. Flerspråklig frontend, søk, demo-bestillingsflyt, gjesteanmeldelser og adminpanel. Porteføljeprosjekt av [Ruslan Bilohash](https://bilohash.com/).
 
-**Versjon:** 1.2.0 · **Språk:** [English](README.md) · [Norsk](README-no.md) · [Українська](README-uk.md) · [Русский](README-ru.md)
+**Versjon:** 1.3.0 · **Språk:** [English](README.md) · [Norsk](README-no.md) · [Українська](README-uk.md) · [Русский](README-ru.md)
 
 ![PHP](https://img.shields.io/badge/PHP-8%2B-777BB4?logo=php&logoColor=white)
-![Version](https://img.shields.io/badge/version-1.2.0-blue)
+![Version](https://img.shields.io/badge/version-1.3.0-blue)
+![Release](https://img.shields.io/github/v/release/Ruslan-Bilohash/booking?label=release)
 ![i18n](https://img.shields.io/badge/languages-NO%20%7C%20EN%20%7C%20UA%20%7C%20RU-green)
 
 ## Live demo
@@ -19,6 +20,10 @@ Universelt **PHP-bestillingsskript** for alle typer reservasjoner — hoteller, 
 | **Løsninger** | https://bilohash.com/booking/solutions.php |
 | **Sitemap** | https://bilohash.com/booking/sitemap.php |
 | **Lansering** | https://bilohash.com/news/booking-cms.html |
+| **30-dagers demo-install** | https://bilohash.com/booking/site/demo-install.php |
+| **Nedlasting (kundepanel)** | https://bilohash.com/ecosystem/cabinet.php |
+| **Bli med i økosystemet** | https://bilohash.com/ecosystem/join.php |
+| **GitHub-release** | https://github.com/Ruslan-Bilohash/booking/releases/tag/v1.3.0 |
 
 **Admin-innlogging (demo):** `demo` / `bilobook2026`
 
@@ -47,13 +52,20 @@ Universelt **PHP-bestillingsskript** for alle typer reservasjoner — hoteller, 
 
 ### Produktside (`/site/`)
 - Landingsside for Booking CMS
-- Språk: NO, EN, UA, RU, LT
+- **`demo-install.php`** — 30-dagers egenhosting-demo (NO, EN, UA, RU, SV, LT)
+- Språk: NO, EN, UA, RU, LT, SV
 - Skjermbilder, versjonsinfo og teknisk stack
+
+### Kommersielt installasjonspakke (v1.3.0)
+- **`booking.zip`** — 30-dagers prøvearkiv for kundens hosting (1 domene per BILOHASH-plan)
+- **`install.php`** — MySQL-veiviser med demodata, admin og valgfri **BHBOOK**-lisensnøkkel
+- Nedlasting via [kundepanel](https://bilohash.com/ecosystem/cabinet.php) etter innlogging og godkjente vilkår
+- Lisens: prøveperiode, **BHBOOK**-verifisering via bilohash.com API
 
 ## Teknisk stack
 
 - PHP 8+ (uten rammeverk)
-- JSON-lagring (`data/*.json`) — MySQL på forespørsel
+- JSON-lagring (`data/*.json`) på bilohash.com-demo · **MySQL** for kommersiell installasjon (`schema.sql`, `install.php`)
 - Modulær i18n (`lang/*.php`)
 - Apache `.htaccess`, SEO (canonical, hreflang, Schema.org, sitemap)
 - OpenStreetMap-innbygging + Google Maps-ruter (ingen API-nøkkel)
@@ -67,6 +79,8 @@ Universelt **PHP-bestillingsskript** for alle typer reservasjoner — hoteller, 
 
 ## Installasjon
 
+### Alternativ A — Git-klon (utvikling / JSON-demo)
+
 1. Klon eller kopier `booking/`-mappen til web-roten:
    ```bash
    git clone https://github.com/Ruslan-Bilohash/booking.git booking
@@ -77,6 +91,15 @@ Universelt **PHP-bestillingsskript** for alle typer reservasjoner — hoteller, 
    chmod 755 data
    ```
 4. Åpne `https://ditt-domene.no/booking/` — demo-eiendommer opprettes automatisk ved første lasting.
+
+### Alternativ B — 30-dagers kommersiell demo (MySQL)
+
+1. Abonner på [bilohash.com/ecosystem/join.php](https://bilohash.com/ecosystem/join.php) og last ned **`booking.zip`** fra [kundepanelet](https://bilohash.com/ecosystem/cabinet.php).
+2. Last opp og pakk ut til `/public_html/booking/` på din hosting.
+3. Åpne `https://ditt-domene.no/booking/install.php` og fullfør MySQL-veiviseren (demodata + admin).
+4. Valgfritt: legg inn **BHBOOK**-lisensnøkkel under installasjon eller senere i admin.
+
+Ferdigbygget arkiv: [GitHub release v1.3.0](https://github.com/Ruslan-Bilohash/booking/releases/tag/v1.3.0) (`booking-install-v1.3.0.zip`).
 
 ### Lokal PHP innebygd server (utvikling)
 
