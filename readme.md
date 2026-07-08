@@ -194,11 +194,13 @@ This is a **demo / portfolio** project:
 
 ## Changelog
 
+See **[CHANGELOG.md](CHANGELOG.md)** for full release notes.
+
 | Version | Date | Highlights |
 |---------|------|------------|
-| **1.3.0** | 2026-07-08 | 30-day demo install package, `install.php` MySQL wizard, BHBOOK license, `demo-install.php` (6 langs) |
-| 1.2.0 | 2026-07-05 | Full project upload, product site, mobile nav, order i18n |
-| 1.1.0 | 2026-07-02 | Admin settings, SEO verticals |
+| **[1.3.0](https://github.com/Ruslan-Bilohash/booking/releases/tag/v1.3.0)** | 2026-07-08 | 30-day demo install, `install.php`, BHBOOK license, `demo-install.php` |
+| 1.2.0 | 2026-07-05 | Reviews, amenities, admin settings, product site, mobile nav |
+| 1.1.0 | 2026-07-02 | CMS settings, contact form, SEO verticals |
 | 1.0.0 | 2026-06-20 | Initial Booking CMS demo |
 
 ## License

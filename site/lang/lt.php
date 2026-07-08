@@ -193,6 +193,7 @@ return [
         'changelog_title' => 'Changelog',
     ],
     'changelog_notes' => [
+        '1.3.0' => '30 dienų demo diegimo paketas (booking.zip), install.php MySQL vedlys, BHBOOK licencija, demo-install.php puslapis (6 kalbos), atsisiuntimas per bilohash.com kliento kabinetą.',
         '1.2.0' => 'Svečių atsiliepimai su moderavimu, patogumai, vietiniai nustatymai (išvaizda, footer, reCAPTCHA, AI pokalbis), admin instrukcijos 4 kalbomis, kalbų meniu demo juostoje ir admin.',
         '1.1.0' => 'CMS nustatymų integracija, kontaktų forma, mobilus našumas.',
         '1.0.0' => 'Pirmasis viešas leidimas: demo frontend, admin panelė, daugiakalbis UI, 10 demo objektų.',

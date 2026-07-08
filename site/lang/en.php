@@ -193,6 +193,7 @@ return [
         'copyright' => '© %s Booking CMS · %s',
     ],
     'changelog_notes' => [
+        '1.3.0' => '30-day demo install package (booking.zip), install.php MySQL wizard, BHBOOK license runtime, demo-install.php product page (6 langs), cabinet download via bilohash.com.',
         '1.2.0' => 'Guest reviews with moderation, property amenities, local settings (appearance, footer colour, reCAPTCHA, AI chat), admin instructions in 4 languages, language dropdown in demo strip and admin.',
         '1.1.0' => 'CMS settings integration, contact form, mobile performance improvements.',
         '1.0.0' => 'Initial public release: demo frontend, admin panel, multilingual UI, 10 demo properties.',

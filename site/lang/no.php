@@ -187,6 +187,7 @@ return [
         'copyright' => '© %s Booking CMS · %s',
     ],
     'changelog_notes' => [
+        '1.3.0' => '30-dagers demo-installasjonspakke (booking.zip), install.php MySQL-veiviser, BHBOOK-lisens, demo-install.php produktside (6 språk), nedlasting via bilohash.com kundepanel.',
         '1.2.0' => 'Gjesteanmeldelser med moderering, fasiliteter, lokale innstillinger (utseende, bunntekst, reCAPTCHA, AI-chat), admininstruksjoner på 4 språk, språkmeny.',
         '1.1.0' => 'CMS-innstillinger, kontaktskjema, forbedret mobil ytelse.',
         '1.0.0' => 'Første offentlige utgivelse: demo-frontend, adminpanel, flerspråklig UI, 10 demo-eiendommer.',
