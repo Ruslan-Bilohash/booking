@@ -25,7 +25,6 @@ function bk_version_date(): string
 function bk_version_releases(): array
 {
     return [
-        ['version' => '1.3.1', 'date' => '2026-07-10'],
         ['version' => '1.3.0', 'date' => '2026-07-08'],
         ['version' => '1.2.0', 'date' => '2026-07-05'],
         ['version' => '1.1.0', 'date' => '2026-07-02'],

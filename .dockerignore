@@ -1,0 +1,17 @@
+.git
+.gitignore
+screenshot
+scripts/node_modules
+scripts/deploy.config.local.ps1
+scripts/ssh-*
+**/.env
+**/.env.*
+**/mail-config.php
+**/settings-local.php
+data/bookings.json
+dist
+*.zip
+.DS_Store
+Thumbs.db
+.idea
+.vscode
